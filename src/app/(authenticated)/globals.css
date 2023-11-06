@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  overflow-x: hidden !important;
+#overflow{
+  overflow-x: hidden;
+ 
 }
 .text-color {
   background: linear-gradient(45deg, #41cc85, #329f83);

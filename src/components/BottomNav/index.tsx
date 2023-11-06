@@ -16,7 +16,7 @@ const BottomNav = () => {
         router.replace("/cart")
        }
     return ( 
-        <section className="flex w-full h-14 z-50 bg-white   items-center justify-between px-4 fixed bottom-0 left-0 shadow-[0px_-4px_5px_0px_#00000024] md:hidden">
+        <section className="flex w-full h-14 z-50  bg-white  items-center justify-between px-4 fixed bottom-0 left-0 shadow-[0px_-4px_5px_0px_#00000024] md:hidden">
          <div className="flex gap-2 items-center">
           {status === "unauthenticated" && (
             <Link href={"/authentication/signin"}>

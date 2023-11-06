@@ -21,7 +21,7 @@ const Home = () => {
       
       
         {/*Banner*/}
-        <section className="w-ful h-full bg-white  items-center flex  flex-col gap-10 py-[1.5rem]">
+        <section className="w-full md:w-full h-full bg-white items-center flex  flex-col gap-10 py-[1.5rem]">
           <h1
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -34,7 +34,7 @@ const Home = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="w-full md:w-[50%] h-full flex items-center justify-center my-10"
+            className="w-[80%] md:w-[50%] h-full flex items-center justify-center my-10"
           >
             <video muted autoPlay loop className="movie  ">
               <source src="/docs.mp4" type="video/mp4" className="rounded-md" />
@@ -88,9 +88,8 @@ const Home = () => {
           </h1>
           <div className="px-2 grid-cols-1 w-full md:w-[96%] h-full grid md:grid-cols-3 gap-4 mt-20">
             <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              className="w-full h-full px-4 py-2 flex flex-col items-center justify-center gap-4 rounded-md border-2 border-[#ccc]"
+            
+              className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]"
             >
               <div className="">
                 <img src="/1.svg" alt="Icon" className=" h-20" />
@@ -105,9 +104,8 @@ const Home = () => {
               </p>
             </div>
             <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              className="w-full h-full px-4 py-2 flex flex-col items-center justify-center gap-4 rounded-md border-2 border-[#ccc]"
+             
+              className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]"
             >
               <div className="">
                 <img src="/2.svg" alt="Icon" className=" h-20" />
@@ -124,9 +122,8 @@ const Home = () => {
               </p>
             </div>
             <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              className="w-full h-full px-4 py-2 flex flex-col items-center justify-center gap-4 rounded-md border-2 border-[#ccc]"
+             
+              className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]"
             >
               <div className="">
                 <img src="/3.svg" alt="Icon" className=" h-20" />
@@ -144,9 +141,8 @@ const Home = () => {
           </div>
           <div className="px-2 grid-cols-1 w-full md:w-[96%] h-full grid md:grid-cols-3 gap-4 mt-20">
             <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              className="w-full h-full px-4 py-2 flex flex-col items-center justify-center gap-4 rounded-md border-2 border-[#ccc]"
+              
+              className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]"
             >
               <div className="">
                 <img src="/4.svg" alt="Icon" className=" h-20" />
@@ -164,9 +160,8 @@ const Home = () => {
               </p>
             </div>
             <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              className="w-full h-full px-4 py-2 flex flex-col items-center justify-center gap-4 rounded-md border-2 border-[#ccc]"
+            
+              className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]"
             >
               <div className="">
                 <img src="/5.svg" alt="Icon" className=" h-20" />
@@ -183,9 +178,8 @@ const Home = () => {
               </div>
             </div>
             <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              className="w-full h-full px-4 py-2 flex flex-col items-center justify-center gap-4 rounded-md border-2 border-[#ccc]"
+              
+              className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]"
             >
               <div className="">
                 <img src="/6.svg" alt="Icon" className=" h-20" />
@@ -218,11 +212,11 @@ const Home = () => {
             data-aos-duration="1000"
             className="w-full  md:w-[90%] h-screen flex items-center justify-center my-10"
           >
-            <Banner />
+           <Banner/>
           </div>
         </section>
         {/*Banner Categorias*/}
-        <section className="w-full h-full bg-white py-[1.5rem]">
+        <section className="w-full h-full bg-white">
           <h1
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -245,7 +239,7 @@ const Home = () => {
                 data-aos-duration="1000"
                 className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
               >
-                <div className="w-full h-[350px] px-2 py-2">
+                <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
                   <img
                     src="/33.svg"
                     alt="Dent"
@@ -266,7 +260,7 @@ const Home = () => {
                 data-aos-duration="1000"
                 className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
               >
-                <div className="w-full h-[350px] px-2 py-2">
+                <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
                   <img
                     src="/biomedico.svg"
                     alt="Dent"
@@ -287,7 +281,7 @@ const Home = () => {
                 data-aos-duration="1000"
                 className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
               >
-                <div className="w-full h-[350px] px-2 py-2 flex items-center justify-center">
+                <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
                   <img
                     src="/dentista.svg"
                     alt="Dent"
@@ -306,7 +300,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <Hotmart />
+        <Hotmart/>
         {/* Banner Chamada CLiente*/}
         <section className="parallax">
           <h1
@@ -390,10 +384,8 @@ const Home = () => {
         </section>
 
         {/* sessao depoimentos */}
-     
-  < section className="w-full h-full  relative">
-  <BottomNav />
-  </section>
+     <BottomNav/>
+  
       
       </section>
   );

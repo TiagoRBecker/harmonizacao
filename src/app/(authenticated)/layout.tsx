@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" className={monteserrat.className}>
-      <body className={"overflow-x-hidden"}>
+      <body id="overflow">
         <SessionProvider>
           <CartProvider>
             <Nav />

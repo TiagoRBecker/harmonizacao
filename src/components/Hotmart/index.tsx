@@ -15,9 +15,9 @@ const HotmartProducts = () => {
         <div data-aos="fade-up"
                 data-aos-duration="1000" className=" w-full grid-cols-1 md:grid md:grid-cols-3 md:w-[80%] h-full gap-2 mx-auto">
           {hotmart.map((products, index: number) => (
-            <div  key={index} data-aos="zoom-out-up">
+            <div  key={index} >
             
-              <div className="mb-4 md:w-full  bg-white border py-4 px-4 border-gray-200 rounded-lg shadow">
+              <div className="mb-4 px-1 md:w-full  bg-white border py-4 md:px-4 border-gray-200 rounded-lg shadow">
                 <div className="w-full h-full">
                 <img
                   className="img"
