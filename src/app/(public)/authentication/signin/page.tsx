@@ -146,7 +146,7 @@ const Signin = () => {
             <h2 className="text-center  text-">ou</h2>
             <div className="w-full flex items-center justify-center  ">
               <button
-                onClick={() => signIn("google", { callbackUrl:`/categories/${id}` })}
+                onClick={() => signIn("google", { callbackUrl: id ? `/categories/${id}`:"/" })}
                 className="w-full flex items-center justify-center  border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
               >
                 <svg
