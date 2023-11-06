@@ -7,7 +7,7 @@ const Banner = () => {
     <section className="w-full h-full  flex items-center justify-center  ">
       <ReactPlayer
         className="videoFrame"
-        url="/movie.mp4"
+        url="/banner_movie.mp4"
        
         light="/cs.jpeg"
         controls={true}
