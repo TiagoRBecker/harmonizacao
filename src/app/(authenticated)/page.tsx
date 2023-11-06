@@ -340,7 +340,7 @@ const Home = () => {
                 className="w-full h-full object-cover  border-[2px] border-white  "
               />
             </div>
-            <div className="w-[30%] h-[450px]  flex flex-col border-[1px] ">
+            <div className="w-full md:w-[30%] h-[450px]  flex flex-col border-[1px] ">
               <div className="w-full h-[50%] bg-black">
                 <img
                   src="/cs.svg"
@@ -365,7 +365,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[30%] h-[450px] bg-blue-800">
+            <div className="w-full md:w-[30%] h-[450px] bg-blue-800">
               <img
                 src="/m4.jpeg"
                 alt=""
@@ -391,8 +391,10 @@ const Home = () => {
 
         {/* sessao depoimentos */}
      
-
-      <BottomNav />
+  < section className="w-full h-full  relative">
+  <BottomNav />
+  </section>
+      
       </section>
   );
 };

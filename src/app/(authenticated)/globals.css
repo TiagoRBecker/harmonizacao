@@ -251,4 +251,7 @@ body {
   .openCart{
     display: none;
   }
+  .closedCart{
+    display: none;
+  }
 }
