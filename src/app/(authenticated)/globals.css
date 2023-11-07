@@ -114,6 +114,7 @@
   animation: pulsar 1.9s ease-in-out;
   animation-iteration-count: 1;
   transition: all ease-in-out 1s;
+  
 }
 
 .img {
@@ -254,5 +255,8 @@
   }
   .closedCart{
     display: none;
+  }
+  .movie{
+    height: 100%;
   }
 }

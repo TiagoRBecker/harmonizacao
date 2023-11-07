@@ -6,7 +6,7 @@ const HotmartProducts = () => {
       {/* sessao hotmart */}
       <section  className="w-full h-full  flex items-center justify-center py-[1.5rem] flex-col px-4 ">
       <h1 data-aos="fade-up"
-                data-aos-duration="1000" className="w-full text-2xl md:text-4xl font-bold  text-center  py-[3rem] ">
+                data-aos-duration="1000" className="w-full text-2xl text-left px-1 md:text-4xl font-bold  md:text-center  py-[3rem] ">
         Produtos
             <span data-aos="fade-up"
                 data-aos-duration="1000" className="text-color"> Hotmart</span>
@@ -17,7 +17,7 @@ const HotmartProducts = () => {
           {hotmart.map((products, index: number) => (
             <div  key={index} >
             
-              <div className="mb-4 px-1 md:w-full  bg-white border py-4 md:px-4 border-gray-200 rounded-lg shadow">
+              <div className="mb-4 px-2 py-4 md:w-full  bg-white border  md:px-4 border-gray-200 rounded-lg shadow">
                 <div className="w-full h-full">
                 <img
                   className="img"

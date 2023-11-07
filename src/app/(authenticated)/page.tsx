@@ -22,7 +22,7 @@ const Home = () => {
       
         {/*Banner*/}
         
-        <section className="w-full  md:w-full h-full bg-white items-center flex  flex-col gap-10 py-[1.5rem]">
+        <section className="w-full h-full gap-1 py-[0rem]  md:w-full  bg-white items-center flex  flex-col md:gap-10 md:py-[1.5rem]">
           <h1
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -35,17 +35,20 @@ const Home = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="w-[80%] md:w-[50%] h-full flex items-center justify-center my-10"
+            className="w-full  items-start md:w-[50%] h-full md:flex md:items-center md:justify-center my-10"
           >
             <video muted autoPlay loop className="movie  ">
               <source src="/docs.mp4" type="video/mp4" className="rounded-md" />
             </video>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-full px-2 ">
+         
+        </section>
+        <section className="w-full h-full  md:w-full  bg-white items-center flex  flex-col md:gap-10 md:py-[1.5rem]">
+        <div className="flex flex-col items-center justify-center w-full h-full px-2 ">
             <h1
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-2xl w-full text-left px-1 md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
+              className="text-2xl w-full text-left  md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
             >
               Prontuários Planejados =
               <span
@@ -53,7 +56,7 @@ const Home = () => {
                 data-aos-duration="1000"
                 className="text-color"
               >
-                {" "}
+               {""}
                 Segurança Profissional
               </span>
             </h1>
@@ -203,7 +206,7 @@ const Home = () => {
           <h1
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="w-full text-2xl md:text-4xl font-bold  text-center  py-[3rem] "
+            className="w-full text-2xl text-left px-1 md:text-4xl font-bold  md:text-center  py-[3rem] "
           >
             Apresentação da
             <span className="text-color"> Plataforma</span>
@@ -211,7 +214,7 @@ const Home = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="w-full h-full  md:w-[90%] md:h-screen flex items-center justify-center my-10"
+            className="w-full h-full px-2 md:w-[90%] md:h-screen flex items-center justify-center my-10"
           >
            <Banner/>
           </div>
@@ -221,7 +224,7 @@ const Home = () => {
           <h1
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="w-full text-2xl md:text-4xl font-bold  text-center  py-[3rem]"
+            className="w-full text-2xl text-left px-1 md:text-4xl font-bold  md:text-center  py-[3rem]"
           >
             Explore por
             <span
