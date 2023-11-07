@@ -25,7 +25,7 @@ export async function POST(req: any) {
       );
       const response = await requeste.json();
       if (response.status === "paid") {
-        const dynamicLink = `http://localhost:3000/api/download?id=${id}`;
+        const dynamicLink = `https://harmonizacao.vercel.app/api/download?id=${id}`;
         const transporter = await nodemailer.createTransport({
           service: "SMTP",
           host: "mail.xn--advogadosdaharmonizao-21b5g.com.br",
@@ -83,9 +83,9 @@ export async function POST(req: any) {
         </head>
         <body>
         <img src="https://res.cloudinary.com/tiagobecker/image/upload/v1697656192/logo_optpg4.png" alt="Logo"/>
-          <p>Obrigado por escolher a nossa empresa.</p
+          <p>Obrigado por escolher a nossa empresa.</p>
           <p>Clique no link abaixo para fazer o download</p>
-          <a href="${dynamicLink}">Baixar Arquivo</a> 
+          <a href="${dynamicLink}">Baixar Arquivo</a> <br/>
           <span>Este link será expirado em 3 horas</span>   
         </body>
       </html>

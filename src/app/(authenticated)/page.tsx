@@ -22,11 +22,11 @@ const Home = () => {
       
         {/*Banner*/}
         
-        <section className="w-full md:w-full h-full bg-white items-center flex  flex-col gap-10 py-[1.5rem]">
+        <section className="w-full  md:w-full h-full bg-white items-center flex  flex-col gap-10 py-[1.5rem]">
           <h1
             data-aos="fade-right"
             data-aos-duration="1000"
-            className="text-2xl w-full md:text-4xl font-bold md:w-[80%]  text-center  py-[3rem] "
+            className="text-2xl w-full text-left md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem] "
           >
             A Primeira Plataforma jurídica com foco na responsabilidade civil
             dos <span className="text-color"> profissionais da saúde</span>
@@ -45,7 +45,7 @@ const Home = () => {
             <h1
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-2xl w-full md:text-4xl font-bold md:w-[80%]  text-center  py-[3rem]"
+              className="text-2xl w-full text-left md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
             >
               Prontuários Planejados =
               <span
@@ -60,7 +60,7 @@ const Home = () => {
             <p
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-left w-[90%] md:text-[#54595F] md:w-[60%] md:text-center"
+              className="text-left w-[90%]  md:text-[#54595F] md:w-[60%] md:text-center"
             >
               Nesta plataforma você terá acesso a documentos, cursos e
               informações fundamentais para atuar com mais segurança jurídica na
@@ -75,7 +75,7 @@ const Home = () => {
           <h1
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="text-2xl w-full md:text-4xl font-bold md:w-[80%]  text-center  py-[3rem]"
+            className="text-2xl w-full text-left md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
           >
             Entenda como usar o seu prontuário como principal meio de defesa
             <span
