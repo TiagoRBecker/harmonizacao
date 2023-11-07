@@ -21,7 +21,7 @@ const Home = () => {
       
       
         {/*Banner*/}
-        <img src="/logo.svg" alt="" />
+        
         <section className="w-full md:w-full h-full bg-white items-center flex  flex-col gap-10 py-[1.5rem]">
           <h1
             data-aos="fade-right"
