@@ -1,16 +1,13 @@
 "use client"
 import {useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { CartContext } from "@/Context";
 const BottomNav = () => {
-    const [ cartStorage, setCartStorage] = useState<any>([])
+   
     const { data: session, status } = useSession();
-     useEffect(()=>{
-      const cartStorage = JSON.parse(localStorage.getItem("cart") as any) || [];
-      if(cartStorage){
-        setCartStorage(cartStorage);
-     }},[])
+    const { cart } = useContext(CartContext);
     const router = useRouter()
     const  goToCart =()=>{
         router.replace("/cart")
@@ -57,7 +54,7 @@ const BottomNav = () => {
             />
           </svg>
           <p className="flex items-center justify-center absolute -top-1 -right-1 w-4 rounded-full h-4 bg-[#072137] text-[10px] text-[#fff] ">
-            {cartStorage?.length}
+            {cart?.length}
           </p>
         </button>
       </div>

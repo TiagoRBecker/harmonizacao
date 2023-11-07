@@ -48,9 +48,10 @@ const Home = () => {
             <h1
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-2xl w-full text-left  md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
+              className="text-2xl w-full text-left flex flex-col justify-center items-center  md:text-4xl md:flex-row gap-4 font-bold md:w-[80%]  md:text-center  py-[3rem]"
             >
-              Prontuários Planejados =
+              Prontuários Planejados 
+              <span className="text-center">=</span>
               <span
                 data-aos="fade-up"
                 data-aos-duration="1000"
