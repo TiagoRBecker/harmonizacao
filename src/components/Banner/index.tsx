@@ -10,7 +10,7 @@ const Banner = () => {
         url="/banner_movie.mp4"
         width="100%"
         height="80%"
-        light="/tumb.svg"
+        light={<img  src="/tumb.svg" alt="Banner" className="w-full h-full "/>}
         controls={true}
        
       />

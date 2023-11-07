@@ -26,7 +26,7 @@ const Home = () => {
           <h1
             data-aos="fade-right"
             data-aos-duration="1000"
-            className="text-2xl w-full text-left md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem] "
+            className="text-2xl w-full px-1 text-left md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem] "
           >
             A Primeira Plataforma jurídica com foco na responsabilidade civil
             dos <span className="text-color"> profissionais da saúde</span>
@@ -45,7 +45,7 @@ const Home = () => {
             <h1
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="text-2xl w-full text-left md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
+              className="text-2xl w-full text-left px-1 md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
             >
               Prontuários Planejados =
               <span
@@ -75,7 +75,7 @@ const Home = () => {
           <h1
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="text-2xl w-full text-left md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
+            className="text-2xl w-full text-left px-1 md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
           >
             Entenda como usar o seu prontuário como principal meio de defesa
             <span
@@ -211,7 +211,7 @@ const Home = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="w-full  md:w-[90%] h-screen flex items-center justify-center my-10"
+            className="w-full h-full  md:w-[90%] md:h-screen flex items-center justify-center my-10"
           >
            <Banner/>
           </div>
