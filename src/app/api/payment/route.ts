@@ -95,7 +95,7 @@ export async function POST(req: Request, res: Response) {
               expires_in: 108000,
               default_payment_method: "pix",
               accepted_payment_methods: ["pix", "credit_card"],
-              success_url: "http://localhost:3000/sucess",
+              success_url: "https://harmonizacao.vercel.app/sucess",
               skip_checkout_success_page: false,
               customer_editable: true,
               billing_address_editable: true,
