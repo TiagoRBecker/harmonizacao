@@ -78,7 +78,10 @@ const Home = () => {
             experiente equipe de Juristas e profissionais de saúde .{" "}
            
           </p>
-          <span className="text-color font-bold">
+          <span 
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className="text-color font-bold">
               Baixe documentos editáveis, personalizáveis, protetivos e pautados
               nos princípios da bioética
           </span>
