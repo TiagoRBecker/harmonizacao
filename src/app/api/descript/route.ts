@@ -2,13 +2,18 @@ import { NextResponse } from "next/server";
 import prisma from "@/server/prisma";
 export async function POST(req: Request) {
   const { name, list} = await req.json();
- console.log(name,list)
+
   try {
-    const create = await prisma?.descript.create({
+    const create = await prisma?.descript.update({
+     where:{
+      id:10
+     },
       data: {
        name,
        list,
-       productsId:2
+      
+     
+       productsId:7
       },
     });
     return NextResponse.json({ message: "Atualizado com sucesso", create });
@@ -17,4 +22,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: "Error", error });
   }
   
+}
+export async function GET(req: Request) {
+  const create = await prisma?.descript.findMany({})
+  return NextResponse.json({ message: "Atualizado com sucesso", create });
 }

@@ -7,13 +7,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import BottomNav from "@/components/BottomNav";
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import { api } from "@/utils/api";
 
 const Home = () => {
+  const [ categories , setCategories] = useState([])
   useEffect(() => {
+    getCategories()
     AOS.init();
   }, []);
-
+ const getCategories = async ()=>{
+  const get = await api.getCat()
+  setCategories(get.categories)
+  console.log(get)
+  return
+ }
   return (
     <section className="w-full h-full">
       <Head />
@@ -216,73 +224,43 @@ const Home = () => {
             Categorias
           </span>
         </h1>
-        <div>
-          <div className="px-4 w-full grid-cols-1 md:grid md:grid-cols-3 md:w-[80%] h-full gap-2 mx-auto">
+        <div className="px-4 w-full grid-cols-1 md:grid md:grid-cols-3 md:w-[95%] h-full gap-2 mx-auto">
+        {
+          categories.map((categories:any, index:number)=>(
             <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
-            >
-              <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
-                <img
-                  src="/33.svg"
-                  alt="Dent"
-                  className="w-full h-full object-cover rounded-md"
-                />
-              </div>
-              <h1 className="w-full text-base h-10 font-bold  text-left px-2">
-                Documentos para dos{" "}
-                <span className="text-color"> Dentistas</span>
-              </h1>
-              <div className="gap-2 w-full flex flex-col sm:flex-row px-2  pt-4 items-center justify-between ">
-                <button className="btn-small ">Basico</button>
-                <button className="btn-small">Avançado</button>
-              </div>
+            key={index}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
+          >
+            <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
+              <img
+                src={categories.img}
+                alt={categories.name}
+                className="w-full h-full object-cover rounded-md"
+              />
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
-            >
-              <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
-                <img
-                  src="/biomedico.svg"
-                  alt="Dent"
-                  className="w-full h-full object-cover rounded-md"
-                />
-              </div>
-              <h1 className="w-full text-base h-10  font-bold  text-left px-2">
-                Documentos para dos{" "}
-                <span className="text-color"> Biomedicos</span>
-              </h1>
-              <div className="gap-2 w-full flex flex-col sm:flex-row px-2  pt-4 items-center justify-between ">
-                <button className="btn-small">Basico</button>
-                <button className="btn-small">Avançado</button>
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
-            >
-              <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
-                <img
-                  src="/dentista.svg"
-                  alt="Dent"
-                  className="w-full h-full object-cover rounded-md"
-                />
-              </div>
-              <h1 className="w-full text-base h-10 font-bold  text-left px-2">
-                Documentos para dos{" "}
-                <span className="text-color"> harmonizaçao</span>
-              </h1>
-              <div className="gap-2 w-full flex flex-col sm:flex-row px-2  pt-4 items-center justify-between ">
-                <button className="btn-small">Basico</button>
-                <button className="btn-small">Avançado</button>
-              </div>
+            <h1 className="w-full text-base h-10 font-bold  text-left px-2">
+              {categories.name}
+              
+            </h1>
+            <div className="gap-2 w-full flex flex-col  px-2  pt-4 items-center justify-between ">
+              {
+                categories.products.map((product:any,index:number)=>(
+                  <Link href={`/categories/${product.id}`} className="btn-small">
+                  <button className="btn-small ">{product.title}</button>
+                  </Link>
+              
+                ))
+              }
+              
             </div>
           </div>
+          ))
+        }
         </div>
+       
+        
       </section>
       <Hotmart />
       {/* Banner Chamada CLiente*/}

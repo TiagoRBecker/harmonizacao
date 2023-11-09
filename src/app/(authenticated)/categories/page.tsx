@@ -6,6 +6,7 @@ import BottomNav from "@/components/BottomNav";
 import Loading from "@/components/Loading";
 import { Product } from "@/utils/types";
 import { api } from "@/utils/api";
+import ReactPlayer from "react-player";
 
 const Contract = () => {
   const [products, setProducts] = useState([]);
@@ -70,17 +71,14 @@ const Contract = () => {
               </div>
             </div>
             <div className="px-4 w-full grid-cols-1 md:grid md:grid-cols-3 md:w-[80%] h-full gap-6 mx-auto">
-              {products.map((items: Product, index: number) => (
+              {products?.map((items: Product, index: number) => (
                 <div
                   key={index}
                   className="w-full h-full py-10  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] ease-linear duration-700 hover:scale-105 "
                 >
                   <div className="w-full h-[300px] px-2 py-2">
-                    <img
-                      src={items.img}
-                      alt="Items"
-                      className="w-[400px] h-full object-cover"
-                    />
+                 <img src={items.thumb} alt={items.title} />
+                
                   </div>
                   <h1 className="w-full text-base h-10 uppercase text-left px-2">
                     <span className="text-[#54595F] "> {items.title}</span>

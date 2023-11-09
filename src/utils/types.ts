@@ -25,7 +25,8 @@ export type Product = {
   title :string,     
   slug:string
   img:string      
-  price:number      
+  price:number  
+  thumb?:string    
 }
 export type Login ={
    email:string,

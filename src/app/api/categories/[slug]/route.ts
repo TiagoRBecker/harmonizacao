@@ -5,13 +5,6 @@ export async function GET(
     { params }: { params: { slug: string } }
   ) {
     const slug = params.slug
-    const get = await prisma.categories.findFirst({
-      where:{
-        slug:slug as string
-      },
-      include:{
-         products:true
-      }
-   })
-  return NextResponse.json({ get})
+    
+  return NextResponse.json({ })
   }

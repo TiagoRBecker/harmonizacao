@@ -1,6 +1,6 @@
 export default function Head (){
     return(
-        <head>
+        <>
 
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <title>Categorias</title>
@@ -56,7 +56,7 @@ export default function Head (){
         content="Advogados da Harmonização: Especialistas em contratos e proteção jurídica para clínicas de harmonização facial. Oferecemos documentos personalizados, Termo de Consentimento Livre e Esclarecido (TCLE), anamnese e blindagem legal. Consulta online disponível para orientação jurídica completa."
       />
       <meta property="twitter:image" content="/logo.png" />
-        </head>
+        </>
     
        
         

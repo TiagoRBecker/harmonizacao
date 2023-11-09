@@ -17,7 +17,7 @@ const Id = ({ params }: { params: { id: string } }) => {
   const router = useRouter();
   const { addToCart } = useContext(CartContext);
   const [products, setProducts] = useState<any>(); // state que recebe os produtos
-  const [loading, setLoading] = useState(false); //state de loading
+  const [loading, setLoading] = useState(true); //state de loading
   useEffect(() => {
     if (id) {
       getDados();
@@ -30,6 +30,7 @@ const Id = ({ params }: { params: { id: string } }) => {
   async function getDados() {
     setLoading(true);
     const get = await api.getDocs(id);
+    console.log(get);
     if (get) {
       setProducts(get.product);
       setLoading(false);
@@ -45,21 +46,25 @@ const Id = ({ params }: { params: { id: string } }) => {
       router.push("/cart");
     }
   };
-  const addCart = (items:any)=>{
+  const addCart = (items: any) => {
     if (!session) {
       router.push(`/authentication/signin?product=${id}`);
-      return
-    }else{
-      addToCart(items)
+      return;
+    } else {
+      addToCart(items);
     }
+  };
+  if(loading){
+    return(
+    <Loading/>
+    )
+    
   }
   return (
     <>
-      <Head  />
+      <Head />
       <section className="w-full h-full py-[5rem] bg-white">
-        {loading ? (
-          <Loading />
-        ) : (
+      
           <div className="w-full h-full px-5  mx-auto">
             <div className="flex-col md:w-full md:flex-row h-full  flex gap-3">
               <div className="w-full md:w-1/2 h-[400px] flex items-center justify-center">
@@ -147,10 +152,10 @@ const Id = ({ params }: { params: { id: string } }) => {
                   <p className="font-bold text-lg  text-black flex gap-2 ">
                     Valor total:
                     <span className="text-color font-bold ">
-                      {products?.oldPrice.toLocaleString("pt-br", {
+                      {new Intl.NumberFormat("pt-BR", {
                         style: "currency",
                         currency: "BRL",
-                      })}
+                      }).format(products?.price / 100)}
                     </span>
                   </p>
                 </div>
@@ -179,13 +184,11 @@ const Id = ({ params }: { params: { id: string } }) => {
               {products?.desccript?.map((details: any, index: number) => (
                 <div
                   key={index}
-                  className="w-[100%] border-[1px] border-[#ccc] py-5 px-5 rounded-md bg-white shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
+                  className="w-[100%] h-full border-[1px] border-[#ccc] py-5 px-5 rounded-md bg-white shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
                 >
-                  <h1 className="font-bold text-base text-[#072137] mb-2">
-                    <span className="text-color">{details.name}</span>
-                  </h1>
+                  <h1 className=" font-bold text-color py-3 uppercase">{details.name}</h1>
                   <ul className="text-base text-[#072137]  ">
-                    {details.list.split(",").map((list: any, index: number) => (
+                    {details.list.split(".").map((list: any, index: number) => (
                       <li key={index} className=" flex pb-3">
                         {list}
                       </li>
@@ -195,7 +198,7 @@ const Id = ({ params }: { params: { id: string } }) => {
               ))}
             </div>
           </div>
-        )}
+        
 
         <ToastContainer />
       </section>

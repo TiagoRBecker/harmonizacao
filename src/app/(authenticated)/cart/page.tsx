@@ -20,7 +20,7 @@ const Cart = () => {
   const [loading, setLoading] = useState(false);// loading da tela 
   //calcula o total dos produtos
   const totalPrice = cart?.reduce((acc: any, item: any) => {
-    return acc + item.oldPrice * 1;
+    return acc + item.price * 1;
   }, 0) as any;
  
 
@@ -125,23 +125,24 @@ const Cart = () => {
                   <div className="flex flex-col rounded-lg bg-white sm:flex-row">
                     <img
                       className="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                      src={items.img}
+                      src={items.thumb}
                       alt=""
                     />
                     <div className="flex w-full flex-col px-4 py-4">
-                      <span className="font-semibold">{items.title}</span>
-                      <span className="float-right text-gray-400">Plano:</span>
+                      <span className="text-color font-bold">{items.title}</span>
+                    
                       <p className="text-lg font-bold">
-                        {items.oldPrice?.toLocaleString("pt-br", {
-                          style: "currency",
-                          currency: "BRL",
-                        })}
+                      {new Intl.NumberFormat("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      }).format(items?.price / 100)}
+                      
                       </p>
                     </div>
                   </div>
                 </div>
               ))}
-              <button onClick={clearCart}>Limpar</button>
+           
             </div>
             <div className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
               <p className="text-xl font-medium">Detalhes do Pagamento</p>
@@ -285,10 +286,11 @@ const Cart = () => {
                         Subtotal
                       </p>
                       <p className="font-semibold text-gray-900">
-                        {totalPrice.toLocaleString("pt-br", {
-                          style: "currency",
-                          currency: "BRL",
-                        })}
+                      {new Intl.NumberFormat("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      }).format(totalPrice / 100)}
+                        
                       </p>
                     </div>
                   </div>
@@ -296,10 +298,11 @@ const Cart = () => {
                     <p className="text-sm font-medium text-gray-900">Total</p>
 
                     <p className="text-2xl font-semibold text-gray-900">
-                      {totalPrice?.toLocaleString("pt-br", {
+                    {new Intl.NumberFormat("pt-BR", {
                         style: "currency",
                         currency: "BRL",
-                      })}
+                      }).format(totalPrice / 100)}
+                     
                     </p>
                   </div>
                 </div>

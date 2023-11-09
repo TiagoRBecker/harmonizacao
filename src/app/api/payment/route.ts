@@ -34,7 +34,7 @@ export async function POST(req: Request, res: Response) {
     const totalAmount = items.reduce((accumulator:any, currentValue:any) => {
       return accumulator + currentValue.amount;
     }, 0);
-    
+   
    const checkout = await prisma.checkout.create({
     data: {
       email: data?.email,
@@ -132,6 +132,7 @@ export async function POST(req: Request, res: Response) {
            
           },
         ],
+        
         antifraud_enabled: false,
         closed: true,
       }),

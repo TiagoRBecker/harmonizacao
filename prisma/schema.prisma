@@ -63,7 +63,6 @@ model VerificationToken {
 model Categories {
   id       Int        @id @default(autoincrement())
   name     String
-  slug     String
   img      String?
   products Products[]
 }
@@ -71,9 +70,8 @@ model Categories {
 model Products {
   id           Int         @id @default(autoincrement())
   title        String
-  slug         String
+  thumb       String?
   img          String?
-  oldPrice     Float?
   price        Float
   desccript    Descript[]
   Categories   Categories? @relation(fields: [categoriesId], references: [id])

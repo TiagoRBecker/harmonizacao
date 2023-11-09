@@ -20,7 +20,7 @@ const Mabvigation = () => {
   };
   const { data: session, status } = useSession();
   const totalPrice = cart?.reduce((acc: any, item: any) => {
-    return acc + item.oldPrice * 1;
+    return acc + item.price * 1;
   }, 0) as any;
 
   return (
@@ -130,7 +130,7 @@ const Mabvigation = () => {
                 <div className="flex items-center justify-start gap-2 py-2">
                   <div className="w-[20%]">
                     <img
-                      src={cart.img}
+                      src={cart.thumb}
                       alt={cart.title}
                       className="w-[40px] h-[40px] object-cover rounded-md"
                     />
@@ -140,10 +140,11 @@ const Mabvigation = () => {
                       {cart.title}
                     </p>
                     <p>
-                      {cart.oldPrice.toLocaleString("pt-br", {
+                    {new Intl.NumberFormat("pt-BR", {
                         style: "currency",
                         currency: "BRL",
-                      })}
+                      }).format(cart?.price / 100)}
+                     
                     </p>
                   </div>
                 </div>
@@ -151,10 +152,11 @@ const Mabvigation = () => {
               <div className="w-full flex items-center py-4 ">
                 <span className="font-bold">Total:</span>
                 <p>
-                  {totalPrice.toLocaleString("pt-br", {
-                    style: "currency",
-                    currency: "BRL",
-                  })}
+                {new Intl.NumberFormat("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      }).format(totalPrice / 100)}
+                
                 </p>
               </div>
               <div className="w-full">
