@@ -76,11 +76,12 @@ const Home = () => {
             com mais segurança jurídica na sua profissão, produzidos por uma{" "}
             {""}
             experiente equipe de Juristas e profissionais de saúde .{" "}
-            <span className="text-color font-bold">
+           
+          </p>
+          <span className="text-color font-bold">
               Baixe documentos editáveis, personalizáveis, protetivos e pautados
               nos princípios da bioética
-            </span>
-          </p>
+          </span>
         </div>
       </section>
       {/*Grid Documentos*/}
