@@ -83,9 +83,7 @@ const Contract = () => {
                   <h1 className="w-full text-base h-10 uppercase text-left px-2">
                     <span className="text-[#54595F] "> {items.title}</span>
                   </h1>
-                  <p className="text-[#54595F] px-2 py-2  overflow-hidden truncate ">
-                    {items.slug}
-                  </p>
+                  
                   <div className="gap-2 w-full flex flex-col sm:flex-row px-2  pt-4 items-center justify-between ">
                     <Link href={`/categories/${items.id}`}>
                       <button className="btn">Explorar</button>

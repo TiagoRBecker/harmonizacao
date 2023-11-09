@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import prisma from "@/server/prisma";
 export async function POST(req: Request) {
-  const { thumb } = await req.json();
+  const { slug } = await req.json();
 
   try {
     const create = await prisma?.products.update({
@@ -10,7 +10,7 @@ export async function POST(req: Request) {
    },
    data:{
    
-    thumb
+    slug
    
     
    }

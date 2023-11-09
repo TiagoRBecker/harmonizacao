@@ -83,7 +83,7 @@ const Home = () => {
           data-aos-duration="1000"
           className="text-color font-bold">
               Baixe documentos editáveis, personalizáveis, protetivos e pautados
-              nos princípios da bioética
+              nos princípios da bioética.
           </span>
         </div>
       </section>
