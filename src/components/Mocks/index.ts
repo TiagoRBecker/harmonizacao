@@ -38,7 +38,7 @@ export const hotmart = [
     descript:
       "O curso visa proporcionar conhecimento sobre aspectos gerais das atividades em observâncias aos ditames legais...",
     price: 120,
-    img: "/CS.jpeg",
+    img: "/caution.svg",
   },
 
 
@@ -49,7 +49,7 @@ export const hotmart = [
     price: 148,
     descript:
       "Anamnese editável organizada por medicamentos, doenças, hábitos e gênero, incluindo questões de rastreio...",
-    img: "/amen.jpeg",
+    img: "/caution.svg",
   },
   {
     id: 3,
@@ -57,85 +57,11 @@ export const hotmart = [
     price: 480,
     descript:
       "Consultas on-line de orientação sobre questões de responsabilidade civil, direito da saúde direito empresarial...",
-    img: "/cs.svg",
+    img: "/caution.svg",
   },
 ];
-export const populares = [
-  {
-    id: 1,
-    Slug: "dentistas",
-    name: "Nome do produto",
-    price: 2159,
-    img: "/bM.jpg",
-  },
-  {
-    id: 2,
-    Slug: "biomedicos",
-    name: "Nome do produto",
-    price: 1590,
-    img: "/hO.jpg",
-  },
-  {
-    id: 3,
-    Slug: "harmonizacao",
-    name: "Nome do produto",
-    price: 1639,
-    img: "/hO.jpg",
-  },
-];
-export const bestSellers = [
-  {
-    id: "1",
-    name: "Dentistas",
-    Slug: "dentistas",
-    img: "/hO.jpg",
-    descript:
-      "Descriçao: Os processos contra clínicas e profissionais da harmonização estão aumentando cada vez mais. A falta da documentação completa tem levado ótimos profissionais a grandes condenações. Este kit de proteção jurídica foi pensado exclusivamente para biomédicos que estão começando a atuar na área da harmonização. Inclui os três principais procedimentos. Analisado palavra por palavra, estes documentos tem a capacidade de blindar a sua clínica juridicamente. ",
-    price: [
-      {
-        name: "KIT AVANÇADO PREMIUM DE PROTEÇÃO JURÍDICA PARA DENTISTAS NA HARMONIZAÇÃO",
-        plane: "Premium",
-        price: 1250,
-        qtd: 1,
-        pdf: "https://onedrive.live.com/download?resid=A487767885870F49%21198231&authkey=!AEmrzD83LwtJWqI&em=2",
-        total: 32,
-      },
-    ],
-  },
-  {
-    id: "2",
-    name: "Biomédicos",
-    img: "/bM.jpg",
-    Slug: "biomedicos",
-    descript:
-      "Os processos contra clínicas e profissionais da harmonização estão aumentando cada vez mais. A falta da documentação completa tem levado ótimos profissionais a grandes condenações. Este kit de proteção jurídica foi pensado exclusivamente para biomédicos que estão começando a atuar na área da harmonização. Inclui os três principais procedimentos. Analisado palavra por palavra, estes documentos tem a capacidade de blindar a sua clínica juridicamente. ",
-    price: [
-      {
-        name: "KIT AVANÇADO PREMIUM DE PROTEÇÃO JURÍDICA PARA BIOMÉDICOS NA HARMONIZAÇÃO",
-        plane: "Premium",
-        price: 1250,
-        qtd: 1,
-        total: 43,
-      },
-    ],
-  },
-  {
-    id: "3",
-    name: "Clinicas de Harmonização",
-    Slug: "harmonizacao",
-    img: "/hO.jpg",
-    price: [
-      {
-        name: "KIT AVANÇADO PREMIUM DE PROTEÇÃO JURÍDICA PARA CLÍNICAS DE HARMONIZAÇÃO",
-        plane: "Premium",
-        price: 2400,
-        qtd: 1,
-        pdf: "https://mega.nz/folder/o2kARKCT#6RCXyudDogGB_0KpPC9sFQ",
-        total: 52,
-      },
-    ],
-  },
-];
+
+
 
 
 

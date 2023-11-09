@@ -1,4 +1,4 @@
-import { Hotmart, bestSellers, hotmart } from "@/components/Mocks/index";
+import {hotmart } from "@/components/Mocks/index";
 import Link from "next/link";
 const HotmartProducts = () => {
   return (
@@ -20,12 +20,13 @@ const HotmartProducts = () => {
               <div className="mb-4 px-2 py-4 md:w-full  bg-white border  md:px-4 border-gray-200 rounded-lg shadow">
                 <div className="w-full h-full">
                 <img
-                  className="img"
+                  className="w-full object-cover"
                   src={products.img}
                   alt={products.name}
+                  
                 />
 
-                  </div>
+                </div>
               
                 <div className=" py-4">
                   
@@ -84,20 +85,15 @@ const HotmartProducts = () => {
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-color font-bold">
-                      {products?.price?.toLocaleString("pt-br", {
-                        style: "currency",
-                        currency: "BRL",
-                      })}
-                    </span>
+                   
                   </div>
-                  <div className="flex items-center pt-5">
+                  <div className="flex items-center justify-center pt-5">
                   
-                    <Link href={"https://hotmart.com/pt-br"} target="_blank">
+                   
                       <button className="btn">
-                        Explorar
+                        Em Breve
                       </button>
-                    </Link>
+                  
                   </div>
                 </div>
               </div>

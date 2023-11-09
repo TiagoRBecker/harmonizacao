@@ -243,7 +243,7 @@ const Home = () => {
                   className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <h1 className="w-full text-base h-10 font-bold  text-left px-2">
+              <h1 className="px-4 uppercase w-full text-[1rem] text-[#54595F] h-10 font-bold  text-left ">
                 {categories.name}
               </h1>
               <div className="gap-2 w-full flex flex-col  px-2  pt-4 items-center justify-between ">

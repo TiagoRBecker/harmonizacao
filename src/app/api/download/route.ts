@@ -60,9 +60,7 @@ export async function GET(req: Request) {
               setTimeout(() => {
                 document.getElementById("downloadLink${index}").click();
               }, ${index * 1000});
-              setTimeout(() => {
-                window.close()
-              }, 10000);
+             
             </script>
           `).join("")}
         </body>
