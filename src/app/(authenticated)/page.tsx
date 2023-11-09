@@ -200,7 +200,7 @@ const Home = () => {
           data-aos="fade-up"
           data-aos-duration="1000"
           className="w-full text-2xl text-left px-1 md:text-3xl font-bold  md:text-center  py-[3rem] "
-        > Por que preciso ter pronntuários 
+        > Por que preciso ter prontuários 
            <span className="text-color"> planejados para Harmonizção?</span>
         </h1>
         <div
