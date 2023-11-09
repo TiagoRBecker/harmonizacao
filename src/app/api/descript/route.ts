@@ -9,12 +9,12 @@ export async function POST(req: Request) {
       id:10
      },
       data: {
-       name,
+       
        list,
-      
+       
+      }
      
-       productsId:7
-      },
+       
     });
     return NextResponse.json({ message: "Atualizado com sucesso", create });
   } catch (error) {

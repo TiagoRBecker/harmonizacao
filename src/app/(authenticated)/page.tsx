@@ -7,21 +7,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import BottomNav from "@/components/BottomNav";
 import Aos from "aos";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { api } from "@/utils/api";
 
 const Home = () => {
-  const [ categories , setCategories] = useState([])
+  const [categories, setCategories] = useState([]);
   useEffect(() => {
-    getCategories()
+    getCategories();
     AOS.init();
   }, []);
- const getCategories = async ()=>{
-  const get = await api.getCat()
-  setCategories(get.categories)
-  console.log(get)
-  return
- }
+  const getCategories = async () => {
+    const get = await api.getCat();
+    setCategories(get.categories);
+    console.log(get);
+    return;
+  };
   return (
     <section className="w-full h-full">
       <Head />
@@ -73,12 +73,13 @@ const Home = () => {
           >
             Nesta plataforma você terá acesso a Termos de consentimento,
             contratos, anamneses, cursos e informações fundamentais para atuar
-            com mais segurança jurídica na sua profissão, produzidos por uma {""}
-             <span className="text-color font-bold">
-              experiente equipe de Juristas e profissionais de saúde
-             </span>
-            . Baixe documentos editáveis, personalizáveis, protetivos e pautados
-            nos princípios da bioética
+            com mais segurança jurídica na sua profissão, produzidos por uma{" "}
+            {""}
+            experiente equipe de Juristas e profissionais de saúde .{" "}
+            <span className="text-color font-bold">
+              Baixe documentos editáveis, personalizáveis, protetivos e pautados
+              nos princípios da bioética
+            </span>
           </p>
         </div>
       </section>
@@ -194,10 +195,9 @@ const Home = () => {
         <h1
           data-aos="fade-up"
           data-aos-duration="1000"
-          className="w-full text-2xl text-left px-1 md:text-4xl font-bold  md:text-center  py-[3rem] "
-        >
-          Apresentação da
-          <span className="text-color"> Plataforma</span>
+          className="w-full text-2xl text-left px-1 md:text-3xl font-bold  md:text-center  py-[3rem] "
+        > Por que preciso ter pronntuários 
+           <span className="text-color"> planejados para Harmonizção?</span>
         </h1>
         <div
           data-aos="fade-up"
@@ -225,42 +225,36 @@ const Home = () => {
           </span>
         </h1>
         <div className="px-4 w-full grid-cols-1 md:grid md:grid-cols-3 md:w-[95%] h-full gap-2 mx-auto">
-        {
-          categories.map((categories:any, index:number)=>(
+          {categories.map((categories: any, index: number) => (
             <div
-            key={index}
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
-          >
-            <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
-              <img
-                src={categories.img}
-                alt={categories.name}
-                className="w-full h-full object-cover rounded-md"
-              />
-            </div>
-            <h1 className="w-full text-base h-10 font-bold  text-left px-2">
-              {categories.name}
-              
-            </h1>
-            <div className="gap-2 w-full flex flex-col  px-2  pt-4 items-center justify-between ">
-              {
-                categories.products.map((product:any,index:number)=>(
-                  <Link href={`/categories/${product.id}`} className="btn-small">
-                  <button className="btn-small ">{product.title}</button>
+              key={index}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
+            >
+              <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">
+                <img
+                  src={categories.img}
+                  alt={categories.name}
+                  className="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <h1 className="w-full text-base h-10 font-bold  text-left px-2">
+                {categories.name}
+              </h1>
+              <div className="gap-2 w-full flex flex-col  px-2  pt-4 items-center justify-between ">
+                {categories.products.map((product: any, index: number) => (
+                  <Link
+                    href={`/categories/${product.id}`}
+                    className="btn-small"
+                  >
+                    <button className="btn-small ">{product.title}</button>
                   </Link>
-              
-                ))
-              }
-              
+                ))}
+              </div>
             </div>
-          </div>
-          ))
-        }
+          ))}
         </div>
-       
-        
       </section>
       <Hotmart />
       {/* Banner Chamada CLiente*/}
