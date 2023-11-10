@@ -106,7 +106,7 @@ const Home = () => {
         <div className="px-2 grid-cols-1 w-full md:w-[96%] h-full grid md:grid-cols-3 gap-4 mt-20">
           <div className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]">
             <div className="">
-              <img src="/docs/1.svg" alt="Icon" className=" h-20" />
+              <img src="/1.svg" alt="Icon" className=" h-20" />
             </div>
 
             <p className="text-center w-full h-28 text-[#54595F]">
@@ -119,7 +119,7 @@ const Home = () => {
           </div>
           <div className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]">
             <div className="">
-              <img src="/docs/2.svg" alt="Icon" className=" h-20" />
+              <img src="/2.svg" alt="Icon" className=" h-20" />
             </div>
 
             <p className="text-center w-full h-28 text-[#54595F] ">
@@ -131,7 +131,7 @@ const Home = () => {
           </div>
           <div className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]">
             <div className="">
-              <img src="/docs/3.svg" alt="Icon" className=" h-20" />
+              <img src="/3.svg" alt="Icon" className=" h-20" />
             </div>
 
             <p className="text-center w-full h-28 text-[#54595F]">
@@ -147,7 +147,7 @@ const Home = () => {
         <div className="px-2 grid-cols-1 w-full md:w-[96%] h-full grid md:grid-cols-3 gap-4 mt-20">
           <div className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]">
             <div className="">
-              <img src="/docs/4.svg" alt="Icon" className=" h-20" />
+              <img src="/4.svg" alt="Icon" className=" h-20" />
             </div>
 
             <p className="text-center w-full h-28 text-[#54595F]">
@@ -163,7 +163,7 @@ const Home = () => {
           </div>
           <div className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]">
             <div className="">
-              <img src="/docs/5.svg" alt="Icon" className=" h-20" />
+              <img src="/5.svg" alt="Icon" className=" h-20" />
             </div>
             <div className="w-full  ">
               <p className="text-center w-full h-28 text-[#54595F]">
@@ -178,7 +178,7 @@ const Home = () => {
           </div>
           <div className="w-full flex flex-col items-center justify-center mx-auto md:w-full h-full px-4 py-2  gap-4 rounded-md border-2 border-[#ccc]">
             <div className="">
-              <img src="/docs/6.svg" alt="Icon" className=" h-20" />
+              <img src="/6.svg" alt="Icon" className=" h-20" />
             </div>
 
             <div className="w-full  ">
