@@ -8,8 +8,11 @@ import { Product } from "@/utils/types";
 import { api } from "@/utils/api";
 import ReactPlayer from "react-player";
 
+
 const Contract = () => {
-  const [products, setProducts] = useState([]);
+   
+   
+  const [products, setProducts] = useState<any>([]);
   const [searchInput, setSearchInput] = useState("");
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -29,6 +32,19 @@ const Contract = () => {
      
    
   };
+  const categoriesLogo = (categories:any)=>{
+   switch(categories){
+     case "Dentistas":
+      return (<p>Dentistas</p>)
+      break
+      case "Biomédicos":
+      return (<p>Biomedicos</p>)
+      break
+      case "Profissionais da Harmonização":
+      return (<p>Harmonizacao</p>)
+      break
+   }
+  }
 
   return (
     <>
@@ -70,18 +86,21 @@ const Contract = () => {
                 </button>
               </div>
             </div>
-            <div className="px-4 w-full grid-cols-1 md:grid md:grid-cols-3 md:w-[80%] h-full gap-6 mx-auto">
+            <div className="px-4 w-full py-10 grid-cols-1 md:grid md:grid-cols-3 md:w-[80%] h-full gap-6 mx-auto">
               {products?.map((items: Product, index: number) => (
+              
                 <div
                   key={index}
-                  className="w-full h-full py-10  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] ease-linear duration-700 hover:scale-105 "
+                  className="w-full h-full flex items-center flex-col py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md ease-linear duration-700 hover:scale-105 "
                 >
-                  <div className="w-full h-[300px] px-2 py-2">
-                 <img src={items.thumb} alt={items.title} />
+                  
                 
+                  <div className="w-full h-full px-2 py-2 relative">
+                 <img src={items.thumb} alt={items.title} className="w-full h-full rounded-md " />
+                    <p className="absolute bg-color-green top-3 left-3 z-50  rounded-md px-4 text-white"> {categoriesLogo(items.Categories?.name )}</p>
                   </div>
-                  <h1 className="w-full text-base h-10 uppercase text-left px-2">
-                    <span className="text-[#54595F] "> {items.title}</span>
+                  <h1 className="w-full text-base uppercase text-left px-2">
+                    <span className="text-[#54595F] font-bold "> {items.title}</span>
                   </h1>
                   
                   <div className="gap-2 w-full flex flex-col sm:flex-row px-2  pt-4 items-center justify-between ">

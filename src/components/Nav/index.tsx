@@ -37,7 +37,7 @@ const Nav = () => {
           <ul className="hidden  md:flex gap-4">
             {links.map((link: Links, index: number) => (
               <li
-                className="uppercase text-gray-400 hover:text-black"
+                className="uppercase text-color font-bold "
                 key={index}
               >
                 <Link href={link.path}>{link.name}</Link>
@@ -46,7 +46,7 @@ const Nav = () => {
             {status === "authenticated" && (
               <li
                 onClick={() => signOut({ callbackUrl: "/" })}
-                className="uppercase text-gray-400 hover:text-black cursor-pointer "
+                className="uppercase text-color font-bold cursor-pointer "
               >
                 Sair
               </li>
@@ -97,7 +97,7 @@ const Nav = () => {
                 alt="Perfil"
                 className="w-8 h-8 bg-transparent  rounded-full"
               />
-              <p className="text-gray-400 text-lg  text-end capitalize truncate">
+              <p className="text-black text-lg  text-end capitalize truncate font-bold">
                 {session?.user.name}
               </p>
             </div>

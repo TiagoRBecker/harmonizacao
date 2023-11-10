@@ -6,13 +6,13 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap text-left lg:text-left">
           <div className="w-full lg:w-6/12 px-4">
-            <h4 className="fonat-semibold uppercase text-[#54595F]  text-sm font-bold mb-2">
+            <h1 className="fonat-semibold uppercase text-[#54595F]  text-sm font-bold mb-2">
               Siga Nos!
-            </h4>
-            <h5 className="text-base mt-0 mb-2 text-[#54595F] ">
+            </h1>
+            <h2 className="text-base mt-0 mb-2 text-[#54595F] ">
               Para obter insights legais, atualizações jurídicas e conselhos
               especializados. Mantenha-se informado e protegido!
-            </h5>
+            </h2>
             <div className="flex mt-6 lg:mb-0 mb-6">
             
 

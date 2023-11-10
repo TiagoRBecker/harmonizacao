@@ -26,7 +26,10 @@ export type Product = {
   slug:string
   img:string      
   price:number  
-  thumb?:string    
+  thumb?:string 
+  Categories?:{
+    name:string
+  }   
 }
 export type Login ={
    email:string,

@@ -30,9 +30,9 @@ const HotmartProducts = () => {
               
                 <div className=" py-4">
                   
-                   <h5 className="text-base font-semibold tracking-tight text-[#54595F] h-14 ">
+                   <h1 className="text-base font-semibold tracking-tight text-[#54595F] h-14 ">
                     {products.name}
-                  </h5>
+                  </h1>
 
                   <div className="flex items-center mt-2.5 mb-5">
                     <svg

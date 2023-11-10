@@ -19,7 +19,6 @@ const Home = () => {
   const getCategories = async () => {
     const get = await api.getCat();
     setCategories(get.categories);
-    console.log(get);
     return;
   };
   return (
@@ -43,8 +42,9 @@ const Home = () => {
           data-aos-duration="1000"
           className="w-full  items-start md:w-[50%] h-full md:flex md:items-center md:justify-center my-10"
         >
-          <video muted autoPlay loop className="movie  ">
+          <video muted autoPlay loop className="movie" >
             <source src="/docs.mp4" type="video/mp4" className="rounded-md" />
+            
           </video>
         </div>
       </section>
@@ -249,6 +249,7 @@ const Home = () => {
               <div className="gap-2 w-full flex flex-col  px-2  pt-4 items-center justify-between ">
                 {categories.products.map((product: any, index: number) => (
                   <Link
+                   key={index}
                     href={`/categories/${product.id}`}
                     className="btn-small"
                   >

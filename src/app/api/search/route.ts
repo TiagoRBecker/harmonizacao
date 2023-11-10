@@ -15,7 +15,11 @@ export async function GET(req: Request, res: Response) {
              return NextResponse.json({searchProducts})
         }
         else{
-            const searchProducts = await prisma.products.findMany({})
+            const searchProducts = await prisma.products.findMany({
+                include:{
+                    Categories:true
+                }
+            })
             return NextResponse.json({searchProducts})
              
         }
