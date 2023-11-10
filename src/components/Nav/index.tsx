@@ -6,7 +6,7 @@ import { signOut, useSession } from "next-auth/react";
 import { links } from "../Mocks";
 import { Links } from "@/utils/types";
 
-const Mabvigation = () => {
+const Nav = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showUser, setSHowUser] = useState(false);
   const [showSideCart, setShowSideCart] = useState(false);
@@ -196,4 +196,4 @@ const Mabvigation = () => {
   );
 };
 
-export default Mabvigation;
+export default Nav;

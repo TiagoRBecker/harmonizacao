@@ -9,7 +9,7 @@ const Consultancy = () => {
     <section className="w-full h-full py-[5rem]">
       <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 justify-items-center">
         <div className="flex items-center justify-center ">
-          <img src="/at.png" alt="Central" />
+          <img src="/contact.png" alt="Central" />
         </div>
         <div className=" pt-[2rem] flex flex-col items-center justify-center">
           <h1 className="w-full  text-center text-xl   font-bold uppercase">

@@ -4,9 +4,11 @@ export async function POST(req: Request) {
   const { slug } = await req.json();
 
   try {
-    const create = await prisma?.pDF.delete({
+    const create = await prisma?.pDF.update({
         where:{
-            id:6
+            id:7
+        },data:{
+            path:"https://onedrive.live.com/download?resid=A487767885870F49%21198308&authkey=!AOR2I5rlcyNV-FM"
         }
      
     });

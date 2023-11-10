@@ -114,27 +114,21 @@ const Footer = () => {
           <h1 className="text-center text-xl  font-bold text-[#54595F] ">
             Formas de Pagamentos
           </h1>
-          <div className="flex gap-2 justify-center items-center">
+          <div className="flex gap-5 justify-center items-center">
             <div className=" py-2 px-5flex items-center justify-center rounded-md">
-              <img src="/pix.png" alt="pix" className="w-[51px] h-[32px]" />
+              <img src="/payments/pix.png" alt="pix" className="w-[51px] h-[32px]" />
             </div>
             <div className=" py-2 px-5flex items-center justify-center rounded-md">
-              <img src="/visa.png" alt="visa" className="w-[51px] h-[32px]" />
+              <img src="/payments/visa.png" alt="visa" className="w-[51px] h-[32px]" />
             </div>
             <div className=" py-2 px-5flex items-center justify-center rounded-md">
               <img
-                src="/mastercard.png"
+                src="/payments/mastercard.png"
                 alt="master"
                 className="w-[51px] h-[32px]"
               />
             </div>
-            <div className=" py-2 px-5flex items-center justify-center rounded-md">
-              <img
-                src="/american.png"
-                alt="american"
-                className="w-[51px] h-[32px]"
-              />
-            </div>
+           
           </div>
         </div>
         <hr className="my-6 border-[#072137]" />

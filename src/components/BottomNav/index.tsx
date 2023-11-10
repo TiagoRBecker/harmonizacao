@@ -1,6 +1,6 @@
 "use client"
 import {useRouter } from "next/navigation"
-import { useEffect, useState, useContext } from "react"
+import { useContext } from "react"
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { CartContext } from "@/Context";
