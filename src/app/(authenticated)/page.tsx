@@ -9,7 +9,7 @@ import BottomNav from "@/components/BottomNav";
 import Aos from "aos";
 import { useEffect, useState } from "react";
 import { api } from "@/utils/api";
-
+import { FaWhatsapp } from "react-icons/fa"
 const Home = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -58,8 +58,7 @@ const Home = () => {
             Prontuários Planejados
             <span className="text-center">=</span>
             <span
-              data-aos="fade-up"
-              data-aos-duration="1000"
+           
               className="text-color"
             >
               {""}
@@ -345,6 +344,11 @@ const Home = () => {
 
   
       <BottomNav />
+      <div className="fixed bottom-4 left-8">
+        <div className="pulsar">
+          <FaWhatsapp size={50} color="#fff" />
+        </div>
+      </div>
     </section>
   );
 };
