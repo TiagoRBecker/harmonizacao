@@ -28,7 +28,7 @@ const Nav = () => {
       <header className="px-4 w-full h-32 flex items-center justify-around bg-white relative  border-b-2 border-gray-400 z-50 ">
         <div className="w-[40%] md:w-[20%] h-full  ">
           <img
-        src="/logo.png"
+        src="/logo.ico"
             alt="Logo"
             className="w-full h-full object-cover"
           />

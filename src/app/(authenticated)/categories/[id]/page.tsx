@@ -28,9 +28,9 @@ const Id = ({ params }: { params: { id: string } }) => {
 
   //Funçao para receber o produto da categoria selecionado
   async function getDados() {
-    setLoading(true);
+   
     const get = await api.getDocs(id);
-    console.log(get);
+    
     if (get) {
       setProducts(get.product);
       setLoading(false);
@@ -60,6 +60,7 @@ const Id = ({ params }: { params: { id: string } }) => {
     )
     
   }
+  
   return (
     <>
       <Head />
@@ -68,13 +69,15 @@ const Id = ({ params }: { params: { id: string } }) => {
           <div className="w-full h-full px-5  mx-auto">
             <div className="flex-col md:w-full md:flex-row h-full  flex gap-3">
               <div className="w-full md:w-1/2 h-[400px] flex items-center justify-center">
+                
                 <ReactPlayer
-                  url="/docs.mp4"
+                  url={products.img}
                   width="100%"
                   height="100%"
                   playing={true}
                   loop={true}
                 />
+              
               </div>
 
               <div className="lg:w-1/2 w-full h-full  px-2 py-2">

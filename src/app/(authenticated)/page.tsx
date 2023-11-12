@@ -22,8 +22,10 @@ const Home = () => {
     return;
   };
   return (
-    <section className="w-full h-full">
-      <Head />
+    <>
+    <Head />
+    <main className="w-full h-full">
+      
 
       {/*Banner*/}
 
@@ -343,13 +345,16 @@ const Home = () => {
       </section>
 
   
-      <BottomNav />
-      <div className="fixed bottom-4 left-8">
+      
+      <div className="fixed  bottom-24 left-6 md:bottom-4 md:left-8">
         <div className="pulsar">
-          <FaWhatsapp size={50} color="#fff" />
+          <FaWhatsapp size={40} color="#fff" />
         </div>
       </div>
-    </section>
+      <BottomNav />
+    </main>
+    </>
+     
   );
 };
 
