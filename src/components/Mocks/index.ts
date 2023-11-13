@@ -53,7 +53,7 @@ export const hotmart = [
   },
   {
     id: 3,
-    name: "Consulta on-line com Advogado(a)",
+    name: "Consulta on-line com Especialista(a)",
     price: 480,
     descript:
       "Consultas on-line de orientação sobre questões de responsabilidade civil, direito da saúde direito empresarial...",

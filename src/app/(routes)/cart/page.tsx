@@ -88,7 +88,7 @@ const Cart = () => {
   return (
     <>
       <Head />
-      <section className="w-full h-full relative">
+      <section className="w-full h-full relative py-[4rem]">
         {cart.length <=0 ? (
           <div className="w-full h-screen flex items-center justify-center">
            <h3 className="text-lg font-semibold text-[#072137]">
@@ -96,7 +96,7 @@ const Cart = () => {
            </h3>
          </div>
         ) : (
-          <div className="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
+          <div className="w-full h-full grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
             <div className="px-4 pt-8">
               <p className="text-xl font-medium">Lista de Produtos</p>
               {cart?.map((items: any, index: any) => (

@@ -50,6 +50,7 @@ const Nav = () => {
           </li>
           {links.map((link: any, index: number) => (
             <li
+            
               className={
                 path.startsWith(link.path)
                   ? "uppercase text-[#54595F] border-b-2 border-[#329f83] hover:text-black "
@@ -122,12 +123,12 @@ const Nav = () => {
               alt="Perfil"
               className="w-8 h-8 bg-transparent  rounded-full"
             />
-            <p className="text-black text-lg  text-end capitalize truncate font-bold">
+            <p className="text-[#54595F]  text-lg  text-end capitalize truncate font-bold">
               {session?.user.name}
             </p>
           </div>
         )}
-        <div className="relative" onClick={handleShowSideCart}>
+        <div className="relative cursor-pointer" onClick={handleShowSideCart}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
