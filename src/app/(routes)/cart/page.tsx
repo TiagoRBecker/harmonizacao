@@ -36,6 +36,10 @@ const Cart = () => {
 
   // FUnçao para enviar os dados para o gatway
   const formData = handleSubmit(async (data) => {
+    if(termsAccepted === false){
+      setError(true)
+      return
+    }
     try {
       const payment = await fetch("/api/payment", {
         method: "POST",
@@ -317,6 +321,12 @@ const Cart = () => {
                     <input type="checkbox"  readOnly  checked={termsAccepted}/>
                     <p>Termos de Contrato</p>
                   </div>
+                  {error && (
+                    <p className="text-red-600 text-sm">
+                      Necessário aceitar os termos do contrato
+                    </p>
+                  )}
+                  
                 
                   <div className="mt-6 border-t border-b py-2">
                     <div className="flex items-center justify-between">
