@@ -39,7 +39,7 @@ export async function POST(req: any) {
         const info = await transporter.sendMail({
           from: "teste@xn--advogadosdaharmonizao-21b5g.com.br",
           to:session?.user.email,
-          subject: "Advogados da Harmonização ",
+          subject: "Harmonização Prontuários ",
          
 
           html: `
@@ -82,7 +82,7 @@ export async function POST(req: any) {
           </style>
         </head>
         <body>
-        <img src="https://res.cloudinary.com/tiagobecker/image/upload/v1697656192/logo_optpg4.png" alt="Logo"/>
+        <img src="https://res.cloudinary.com/tiagobecker/image/upload/v1699906778/logo_ufbhpl.ico" alt="Logo"/>
           <p>Obrigado por escolher a nossa empresa.</p>
           <p>Clique no link abaixo para fazer o download</p>
           <a href="${dynamicLink}">Baixar Arquivo</a> <br/>
