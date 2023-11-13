@@ -3,7 +3,7 @@ export default function Head (){
         <>
 
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <title>Categorias</title>
+            <title>Produtos</title>
             
       <meta name="title" content="Advogados da Harmonizaçao" />
       <meta
