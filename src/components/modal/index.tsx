@@ -187,8 +187,8 @@ export default function Modal({
       
     >
       <Dialog.Panel 
-       style={{ overflowY: 'scroll', height: '100%' }}
-      className=" flex items-center justify-center flex-col w-[80%]  py-4 mx-auto bg-white px-5 pt-5 rounded-md  relative">
+       style={{ overflowY: 'scroll', minHeight: '120vh' }}
+      className=" flex items-center justify-start flex-col w-[80%] mx-auto  py-4  bg-white px-5  rounded-md  relative">
         <div className="w-full flex items-center justify-end">
           <button
             onClick={() => setIsOpen(false)}
