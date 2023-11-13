@@ -11,6 +11,7 @@ import Aos from "aos";
 import { useEffect, useState } from "react";
 import { api } from "@/utils/api";
 import { FaWhatsapp } from "react-icons/fa"
+import Whatsszapp from "@/components/WhatssappButtom/intex";
 const Home = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -347,11 +348,8 @@ const Home = () => {
 
   
       
-      <div className="fixed  bottom-24 left-6 md:bottom-4 md:left-8">
-        <div className="pulsar">
-          <FaWhatsapp size={40} color="#fff" />
-        </div>
-      </div>
+      
+      <Whatsszapp/>
       <BottomNav />
   
     </>

@@ -121,7 +121,7 @@ export default function Modal({ isOpen, setIsOpen ,termsAccepted,setTermsAccepte
 
               <button
                 className="  mt-4 mb-8  rounded-md bg-red-700 px-6 py-3 font-medium text-white"
-                onClick={handleAcceptedTerms}
+                onClick={handleCancel}
               >
                 Não aceito os termos de uso
               </button>
@@ -161,27 +161,37 @@ export default function Modal({ isOpen, setIsOpen ,termsAccepted,setTermsAccepte
         body:JSON.stringify({accepted,notAccepted})
        })
       const reponse = await request.json()
-      console.log(reponse)
+    
       setNextTerms(false);
       setIsOpen(false);
       setStep(1);
     } else {
-      return alert("Erro");
+      return alert("Error");
     }
   };
+const handleCancel = () =>{
+    setNextTerms(false);
+    setIsOpen(false);
+    setStep(1);
+    setAccepted(false)
+    setNotAccepted(false)
+  }
   return (
-    <>
+   
       <Dialog
-        className="bg-opacity w-full h-screen top-0 bottom-0 left-0  right-0 py-2 absolute "
+        className="  bg-opacity w-full h-full top-0 bottom-0 left-0 z-50  right-0 py-10 absolute "
         open={isOpen}
-        onClose={() => setIsOpen(false)}
+        onClose={handleCancel}
       >
         
-        <Dialog.Panel className="flex items-center justify-start flex-col w-[80%] h-[500px] mt-5 mx-auto bg-white px-5 pt-5 rounded-md  relative">
+        <Dialog.Panel className="flex items-center justify-center flex-col w-[80%] h-full mt-5 mx-auto bg-white px-5 pt-5 rounded-md  relative">
+        <div className="w-full flex items-center justify-end">
         <button 
          onClick={() => setIsOpen(false)}
-        className="absolute top-2 right-2 w-6 h-6 bg-red-700 flex items-center justify-center text-white">X</button>
-          <Dialog.Title className="text-2xl text-[#072137] font-semibold">Termos e Condições de Uso </Dialog.Title>
+        className="w-8 h-8  rounded-full border-2 border-red-600">X</button>
+        </div>
+       
+          <Dialog.Title className="text-lg md:text-2xl text-[#072137] font-semibold">Termos e Condições de Uso </Dialog.Title>
           <div>{getLayout()}</div>
           <div className="flex gap-2">
             <button
@@ -201,6 +211,6 @@ export default function Modal({ isOpen, setIsOpen ,termsAccepted,setTermsAccepte
           </div>
         </Dialog.Panel>
       </Dialog>
-    </>
+  
   );
 }

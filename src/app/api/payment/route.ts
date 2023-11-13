@@ -8,7 +8,8 @@ export async function POST(req: Request, res: Response) {
   const code: string = data.phone.substring(0, 2);
   const phone: string = data.phone.slice(2);
   const session = await getServerSession(authOptions);
-
+  const catClient = data.doc.length > 11 ? "company":"individual"
+  const docType = data.doc.length > 11 ? "cnpj" :"cpf"
  const  ids = cart.map((id:any)=> {return id.id})
 
  
@@ -68,6 +69,7 @@ export async function POST(req: Request, res: Response) {
             line_1: "Seu Endereço",
             line_2: "casa",
           },
+          
           phones: {
             home_phone: {
               country_code: "55",
@@ -81,7 +83,9 @@ export async function POST(req: Request, res: Response) {
             },
           },
           name: data.name,
-          type: "individual",
+          type: catClient,
+          document_type: docType,
+          document: data.doc,
           email: data.email,
           metadata:{ orderID:checkout.id}
         },
@@ -133,7 +137,7 @@ export async function POST(req: Request, res: Response) {
           },
         ],
         
-        antifraud_enabled: false,
+        antifraud_enabled: true,
         closed: true,
       }),
      
@@ -153,5 +157,6 @@ export async function POST(req: Request, res: Response) {
     );
   }
   
+
  
 }

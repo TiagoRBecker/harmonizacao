@@ -10,7 +10,7 @@ export type Checkout ={
   email: string;
   phone: string;
   city: string;
-  crm:string;
+  doc:string
   
 }
 

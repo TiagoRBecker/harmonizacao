@@ -24,7 +24,11 @@ export const checkout = z.object({
     message: "Necessário  preencher o campo telefone com 11 dígitos",
   }),
   city: z.string().min(1, { message: "Necessário  preencher o campo cidade" }),
-
+  doc: z
+  .string()
+  .refine((value) => value.length >= 11 && value.length <= 14, {
+    message: "O campo deve ter entre 11 e 14 dígitos",
+  }),
   
 });
 export const login = z.object({
