@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import Hotmart from "@/components/Hotmart";
 import Head from "./head";
@@ -24,7 +25,7 @@ const Home = () => {
   return (
     <>
     <Head />
-    <main className="w-full h-full">
+
       
 
       {/*Banner*/}
@@ -33,10 +34,10 @@ const Home = () => {
         <h1
           data-aos="fade-right"
           data-aos-duration="1000"
-          className="text-2xl w-full px-1 text-left md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem] "
+          className="text-2xl w-full   px-1 text-left md:text-3xl font-bold md:w-[80%]  md:text-center  py-[3rem] "
         >
           A Primeira Plataforma com foco na responsabilidade civil
-          <span className="text-color"> dos profissionais de harmonização</span>
+          <span className="text-color" > dos profissionais de harmonização</span>
         </h1>
 
         <div
@@ -55,7 +56,7 @@ const Home = () => {
           <h1
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="text-2xl w-full text-left flex flex-col justify-center items-center  md:text-4xl md:flex-row gap-4 font-bold md:w-[80%]  md:text-center  py-[3rem]"
+            className="text-2xl w-full text-left flex flex-col justify-center items-center  md:text-3xl md:flex-row gap-4 font-bold md:w-[80%]  md:text-center  py-[3rem]"
           >
             Prontuários Planejados
             <span className="text-center">=</span>
@@ -93,7 +94,7 @@ const Home = () => {
         <h1
           data-aos="fade-up"
           data-aos-duration="1000"
-          className="text-2xl w-full text-left px-1 md:text-4xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
+          className="text-2xl w-full text-left px-1 md:text-3xl font-bold md:w-[80%]  md:text-center  py-[3rem]"
         >
           Entenda como usar o seu prontuário como principal meio de defesa
           <span
@@ -217,7 +218,7 @@ const Home = () => {
         <h1
           data-aos="fade-up"
           data-aos-duration="1000"
-          className="w-full text-2xl text-left px-1 md:text-4xl font-bold  md:text-center  py-[3rem]"
+          className="w-full text-2xl text-left px-1 md:text-3xl font-bold  md:text-center  py-[3rem]"
         >
           Explore por
           <span
@@ -268,7 +269,7 @@ const Home = () => {
         <h1
           data-aos="fade-up"
           data-aos-duration="1000"
-          className="text-white text-2xl w-full md:text-4xl font-bold md:w-[80%]  text-center  py-[3rem] "
+          className="text-white text-2xl w-full md:text-3xl font-bold md:w-[80%]  text-center  py-[3rem] "
         >
           A Primeira Plataforma jurídica com foco na responsabilidade civil dos{" "}
           <span
@@ -352,7 +353,7 @@ const Home = () => {
         </div>
       </div>
       <BottomNav />
-    </main>
+  
     </>
      
   );

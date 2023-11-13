@@ -9,6 +9,9 @@ const Footer = () => {
             Institucional
           </span>
           <ul className="list-unstyled text-[#54595F] ">
+            <Link href={"/"}>
+              <li  className="text-[#54595F]  hover:text-black font-semibold block pb-2 text-sm">Home</li>
+            </Link>
             {links.map((link: Links, index: number) => (
               <li key={index}>
                 <Link
@@ -19,6 +22,11 @@ const Footer = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href={"/privacy"}  className="text-[#54595F]  hover:text-black font-semibold block pb-2 text-sm">
+              Políticas de Privacidade
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="w-full h-full py-4 md:h-[250px]">
@@ -95,8 +103,9 @@ const Footer = () => {
             </div>
         </div>
         <div className="w-full h-full py-4 md:h-[250px] ">
-          
+          <Link href={"/"}>
          <img src="/logo.png" alt="Logo" className="w-full h-[200px] object-cover" />
+         </Link>
         </div>
       </div>
       <div className="w-full h-full ">

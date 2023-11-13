@@ -208,7 +208,7 @@ const Signin = () => {
               </button>
             </div>
           </div>
-          <div className=" md:bg-[url('/form.jpg')] bg-cover bg-center w-full h-screen col-span-2 brightness-50 hidden md:block "></div>
+          <div className=" md:bg-[url('/on.png')] bg-cover bg-center w-full h-screen col-span-2 brightness-50 hidden md:block "></div>
         </div>
         <ToastContainer />
       </section>

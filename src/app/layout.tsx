@@ -1,10 +1,11 @@
 "use client"
+
 import "./global.css";
 import { Poppins } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
-import  CartProvider  from "../../../Context/index";
+import  CartProvider  from "../Context/index";
 const poppins = Poppins({
-  subsets:['latin'],
+  subsets:['latin-ext'],
   weight:['400','500',"600","700"]
 });
 import AOS from 'aos';

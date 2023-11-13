@@ -67,14 +67,9 @@ export const hotmart = [
 
 
 export const links = [
-  {
-    name: "Home",
-    path: "/",
-    icon:"/home.png"
-  
-  },
-  { name: "Documentação", path: "/categories",icon:"/book.png" },
-  { name: "Cursos", path: "/courses", icon:"/c.png" },
-  { name: "Consultas", path: "/consultancy" ,icon:"/call.png"},
-  { name: "Contato", path: "/contact" ,icon:"/mail.png"},
+ 
+  { name: "Documentação", path: "/categories" },
+  { name: "Cursos", path: "/courses",  },
+  { name: "Consultas", path: "/consultancy" },
+  { name: "Contato", path: "/contact" },
 ];
