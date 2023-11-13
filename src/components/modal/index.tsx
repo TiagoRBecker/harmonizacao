@@ -85,8 +85,7 @@ export default function Modal({
                     checked={notAccepted}
                     onChange={handleNotAccepted}
                   />
-                  Sim, utilizarei apenas para minha atividade Profissional e de
-                  minha equipe.
+                 Sim, farei as alterações que julgar necessário.
                 </label>
                 <label className="flex w-full gap-3">
                   <input
