@@ -52,7 +52,7 @@ const Sucess = () => {
     <section className="flex flex-col w-full h-screen  items-center ">
       <h1 className="text-center mt-14 text-lg text-[#072137] w-[80%]">
         Obrigado por sua compra! Agradecemos por escolher nossos produtos.
-        Estamos trabalhando diligentemente para processar seu pedido, e em breve
+        Estamos trabalhando diligentemente para processar seu pedido, dentro <span className="text-color font-bold">de 5 minutos</span>
         você poderá fazer o download dos seus itens adquiridos. Fique atento
         para mais atualizações em breve!
       </h1>

@@ -81,7 +81,7 @@ const Footer = () => {
         <h1 className="fonat-semibold uppercase text-[#54595F]  text-sm font-bold mb-2">
               Siga Nos!
             </h1>
-           
+          <div className="flex"> 
             <div className="flex mt-6 lg:mb-0 mb-6">
               <button className="bg-[#e8e8e8] border-2 border-[#25d366] text-[#c4302b] rounded-full flex items-center justify-center font-normal h-10 w-10   mr-2">
                 <Link
@@ -101,6 +101,19 @@ const Footer = () => {
                 </Link>
               </button>
             </div>
+            <div className="flex mt-6 lg:mb-0 mb-6">
+              <button className="bg-[#e8e8e8] border-2 border-[#25d366] text-[#c4302b] rounded-full flex items-center justify-center font-normal h-10 w-10   mr-2">
+                <Link
+                  href={
+                    "https://www.instagram.com/guedesbampi.med"
+                  }
+                  target="_blank"
+                >
+                <img src="/insta.png" alt="Logo Insta" />
+                </Link>
+              </button>
+            </div>
+          </div>
         </div>
         <div className="w-full h-full py-4 md:h-[250px] ">
           <Link href={"/"}>
