@@ -183,8 +183,12 @@ export default function Modal({
       className="  bg-opacity w-full h-full top-0 bottom-0 left-0 z-50  right-0 py-10 absolute "
       open={isOpen}
       onClose={handleCancel}
+      style={{ overflowY: 'scroll' }}
+      
     >
-      <Dialog.Panel className="flex items-center justify-center flex-col w-[80%]  py-4 mx-auto bg-white px-5 pt-5 rounded-md  relative">
+      <Dialog.Panel 
+       style={{ overflowY: 'scroll', height: '100%' }}
+      className=" flex items-center justify-center flex-col w-[80%]  py-4 mx-auto bg-white px-5 pt-5 rounded-md  relative">
         <div className="w-full flex items-center justify-end">
           <button
             onClick={() => setIsOpen(false)}
