@@ -50,15 +50,15 @@ const Nav = () => {
           </li>
           {links.map((link: any, index: number) => (
             <li
-            
+            key={index}
               className={
                 path.startsWith(link.path)
                   ? "uppercase text-[#54595F] border-b-2 border-[#329f83] hover:text-black "
                   : "uppercase text-[#54595F] border-b-2 border-white"
               }
-              key={index}
+             
             >
-              <Link href={link.path}>{link.name}</Link>
+              <Link   href={link.path}>{link.name}</Link>
             </li>
           ))}
           {status === "authenticated" && (
@@ -83,10 +83,10 @@ const Nav = () => {
             </li>
           </Link>
           {links.map((link: any, index: number) => (
-            <Link href={link.path}>
+            <Link  key={index} href={link.path}>
               <li
                 onClick={() => setShowMenu(false)}
-                key={index}
+               
                 className="w-full cursor-pointer  flex items-center justify-center uppercase text-gray-400 hover:text-black hover:bg-gray-300"
               >
                 {link.name}
@@ -153,7 +153,7 @@ const Nav = () => {
         {cart.length > 0 ? (
           <>
             {cart.map((cart: any, index: number) => (
-              <div className="flex items-center justify-start gap-2 py-2">
+              <div key={index} className="flex items-center justify-start gap-2 py-2">
                 <div className="w-[20%]">
                   <img
                     src={cart.thumb}

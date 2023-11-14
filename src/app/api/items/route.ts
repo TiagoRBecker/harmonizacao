@@ -5,7 +5,7 @@ export async function POST(req: Request, res: Response) {
     where:{
         id:7
     },data:{
-        path:"https://onedrive.live.com/download?resid=5F2CFC4512386085%21117&authkey=!ACBAfnbpdOmrf2U"
+        path:"https://onedrive.live.com/download?resid=5F2CFC4512386085%21125&authkey=!AA7M70nTcPRX9K8"
     }
  })
  return NextResponse.json({update})
