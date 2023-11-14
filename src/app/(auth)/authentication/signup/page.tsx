@@ -11,6 +11,7 @@ import { BeatLoader } from "react-spinners";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
+import Loading from "@/components/Loading";
 const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter()
@@ -72,7 +73,7 @@ const SignUp = () => {
   if (loading) {
     return (
       <section className=" w-full h-screen flex items-center justify-center">
-        <BeatLoader color="#072137" size={25} />
+        <Loading/>
       </section>
     );
   }

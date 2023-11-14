@@ -1,6 +1,5 @@
 "use client";
 import Head from "./head";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { useContext, useEffect, useState } from "react";
@@ -10,7 +9,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BottomNav from "@/components/BottomNav";
 import { api } from "@/utils/api";
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+
 const Id = ({ params }: { params: { id: string } }) => {
   const { data: session } = useSession();
   const id = params.id;
@@ -54,7 +53,28 @@ const Id = ({ params }: { params: { id: string } }) => {
       addToCart(items);
     }
   };
-
+  const stars = (title:string)=>{
+    switch(title){
+      case "Pacote para Dentistas Iniciantes":
+       return (<span className="text-[#54595F] ml-3">79 Avaliações</span>)
+       break
+       case "Pacote para Dentistas Avançado ":
+       return (<span className="text-[#54595F] ml-3">155 Avaliações</span>)
+       break
+       case "Pacote para Biomédico Iniciante":
+       return (<span className="text-[#54595F] ml-3">95 Avaliações</span>)
+       break
+       case "Pacote para Biomédico Avançado":
+       return (<span className="text-[#54595F] ml-3">93 Avaliações</span>)
+       break
+       case "Pacote para Profissional de harmonização Iniciante":
+       return (<span className="text-[#54595F] ml-3">147 Avaliações</span>)
+       break
+       case "Pacote para Profissional de harmonização Avançado":
+       return (<span className="text-[#54595F] ml-3">107 Avaliações</span>)
+       break
+    }
+   }
   
   return (
     <>
@@ -136,7 +156,7 @@ const Id = ({ params }: { params: { id: string } }) => {
                 >
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                 </svg>
-                <span className="text-[#54595F] ml-3">5 Avaliações</span>
+                {stars(products.title)}
               </span>
             </div>
             <div>

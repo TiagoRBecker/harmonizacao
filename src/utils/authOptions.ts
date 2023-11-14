@@ -32,21 +32,22 @@ export const authOptions: NextAuthOptions = {
             email: credentials.email,
           },
         });
-        if (!user) {
-          throw new Error("Usuario nao cadastrado no sistema");
+        if (user && !user.password) {
+          throw new Error("Usuário cadastrado via google");
+        
         }
         const hash = await bcrypt.compare(
           credentials.password,
-          user.password as string
+          user?.password as string
         );
         if (!hash) {
           throw new Error("E-mail ou senha  inválido");
         }
         return {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          image: user.image,
+          id: user?.id,
+          name: user?.name,
+          email: user?.email,
+          image: user?.image,
         };
       },
     }),
