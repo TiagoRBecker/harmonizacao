@@ -46,6 +46,8 @@ export const create = z.object({
     .string()
     .email({ message: "Insira um email válido" })
     .min(1, { message: "Necessário  preencher o email" }),
+  profession: z.string().min(1,{message:"Necessário preencher o campo da atuação"}),
+  docs: z.string().min(1,{message:"Necessário preencher o campo Registro"}),
   password: z
     .string()
     .min(5, { message: "Necessário  preencher o campo senha" }),

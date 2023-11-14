@@ -1,4 +1,5 @@
 "use client";
+
 import Head from "./head";
 import Link from "next/link";
 import { Create } from "@/utils/types";
@@ -79,17 +80,18 @@ const SignUp = () => {
   return (
     <>
     <Head/>
-    <section className="w-full h-screen bg-white ">
-      <div className="w-full h-full grid-cols-1 md:grid md:grid-cols-3">
-      <div className="bg-[url('/on.png')] bg-cover bg-center w-full h-screen col-span-2 brightness-50 hidden  md:block"></div>
-      <div className="w-full h-full flex flex-col items-center justify-center px-6 mx-auto md:h-screen lg:py-0">
+    <section className="w-full h-full  ">
+      <div className="w-full h-full  grid-cols-1 md:grid md:grid-cols-2 ">
+      <div className="bg-[url('/on.png')] bg-cover bg-center w-full h-screen  brightness-50 hidden  md:block"></div>
+      <div className="w-full h-full flex flex-col items-center justify-center  px-6 mx-auto md:h-full lg:py-0">
      
           
-            <h1 className="text-left  uppercase text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            <h1 className="text-color font-bold text-2xl w-full text-left py-4 uppercase">
               Criar Conta
             </h1>
-            <form className="w-full flex flex-col gap-2" onSubmit={onSubmit}>
-              <div className="w-full mb-10">
+            <form className="w-full flex flex-col gap-1 " onSubmit={onSubmit}>
+              <div className="w-full mb-3 flex-col md:flex md:flex-row gap-1">
+                <div className="w-full md:w-[50%]">
                 <label
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -105,9 +107,9 @@ const SignUp = () => {
                 {errors.name && (
                   <p className="text-red-600 text-sm">{errors?.name.message}</p>
                 )}
-              </div>
-              <div className="w-full mb-5">
-                <label
+                </div>
+               <div className="w-full md:w-[50%]">
+               <label
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
@@ -124,8 +126,48 @@ const SignUp = () => {
                     {errors?.email.message}
                   </p>
                 )}
+               </div>
+                
+                 
               </div>
-              <div className="w-full mb-5">
+              <div className="w-full mb-3 flex-col md:flex md:flex-row gap-1">
+               <div className="w-full md:w-[50%]">
+               <label
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                 Área de Atuaçao
+                </label>
+                <input
+                  type="name"
+                  {...register("profession")}
+                  className="w-full border-b-[1px] border-gray-500 outline-none pb-2"
+                  placeholder="Digite sua área de atuação..."
+                />
+                {errors.profession && (
+                  <p className="text-red-600 text-sm">{errors?.profession.message}</p>
+                )}
+               </div>
+               <div className="w-full md:w-[50%]">
+               <label
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  CRO ou CRBM
+                </label>
+                <input
+                  type="name"
+                  {...register("docs")}
+                  className="w-full border-b-[1px] border-gray-500 outline-none pb-2"
+                  placeholder="CRO ou CRBM"
+                />
+                {errors.docs && (
+                  <p className="text-red-600 text-sm">{errors?.docs.message}</p>
+                )}
+               </div>
+              </div>
+             
+              <div className="w-full mb-3">
                 <label
                   htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

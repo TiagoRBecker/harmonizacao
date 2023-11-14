@@ -39,7 +39,9 @@ export type Create = {
   name:string,
   email:string,
   password:string,
-  confirm:string
+  confirm:string,
+  docs:string,
+  profession:string
 }
 export type Links ={
   name:string,
