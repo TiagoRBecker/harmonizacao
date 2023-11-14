@@ -235,8 +235,7 @@ const Home = () => {
           {categories.map((categories: any, index: number) => (
             <div
               key={index}
-              data-aos="fade-up"
-              data-aos-duration="1000"
+              
               className="w-full h-full py-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-md"
             >
               <div className="w-full flex items-center justify-center h-[350px] px-2 py-2">

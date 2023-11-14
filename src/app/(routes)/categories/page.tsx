@@ -6,7 +6,7 @@ import BottomNav from "@/components/BottomNav";
 import Loading from "@/components/Loading";
 import { Product } from "@/utils/types";
 import { api } from "@/utils/api";
-import ReactPlayer from "react-player";
+
 
 
 const Contract = () => {

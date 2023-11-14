@@ -11,7 +11,8 @@ export const api = {
     },
     async getCat(){
         const request  = await fetch("/api/categories", {
-            method:"GET"
+            method:"GET",
+            cache:"no-cache"
         })
         const response = await request.json()
         return response
