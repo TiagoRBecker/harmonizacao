@@ -61,17 +61,10 @@ const Contact = ({color}:any) => {
               d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
             />
           </svg>
-          <Link
-            href={
-              "https://wa.me/5551980519018?text=Olá!+Gostaria+de+adquirir+um+contrato+manualmente.+Como+devo+proceder?"
-            }
-            target="_blank"
-          >
+          <Link href={"https://wa.me/55519805190?text=Bem+vindos+a+plataforma+de+harmonização+Prontuários.++Em+que+podemos+ajudar+?"} target="_blank">
             <p className="text-[#072137] pt-2">( 51 )98051-9018</p>
           </Link>
-          <p className="text-[#072137] pt-2 flex items-center">
-            ( 51 )98051-9018
-          </p>
+         
         </div>
         <div className="borderl  ">
           <svg
@@ -113,21 +106,23 @@ const Contact = ({color}:any) => {
               d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
             />
           </svg>
+          
           <p className="text-[#072137] pt-2">
             <Link href={"mailto:contato@guedesbampi.com.br"}>
               contato@guedesbampi.com.br
             </Link>
           </p>
-          <p className="text-[#072137] pt-2">
-            <Link href={"mailto:contato@guedesbampi.com.br"}>
-              contato@guedesbampi.com.br
-            </Link>
-          </p>
+          
         </div>
       </div>
+      <div className="flex items-center justify-center flex-col">
       <h2 className="text-center font-bold text-2xl py-[2rem]">
-        Envie Sua Mensagem e <span className="text-color">Faça Parte da Conversa!</span>
+      Envie sua Mensagem!
+      
       </h2>
+      <span className="text-color text-lg text-center font-bold "> Em breve, um membro denossa equipe de suporte entrará em contato</span>
+      </div>
+     
 
       <div className="w-full h-full"> 
        

@@ -26,12 +26,7 @@ const Consultancy = () => {
             
 
               <button className="btn-small">
-                <Link
-                  href={
-                    "https://wa.me/5551980519018?text=Olá!+Gostaria+de+adquirir+um+contrato+manualmente.+Como+devo+proceder?"
-                  }
-                  target="_blank"
-                >
+              <Link href={"https://wa.me/55519805190?text=Bem+vindos+a+plataforma+de+harmonização+Prontuários.++Em+que+podemos+ajudar+?"} target="_blank">
                  Agendar
                 </Link>
               </button>
