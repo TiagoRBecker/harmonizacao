@@ -58,7 +58,7 @@ const Id = ({ params }: { params: { id: string } }) => {
       case "Pacote para Dentistas Iniciantes":
        return (<span className="text-[#54595F] ml-3">79 Avaliações</span>)
        break
-       case "Pacote para Dentistas Avançado ":
+       case "Pacote para Dentistas Avançado":
        return (<span className="text-[#54595F] ml-3">155 Avaliações</span>)
        break
        case "Pacote para Biomédico Iniciante":
