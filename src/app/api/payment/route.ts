@@ -57,7 +57,7 @@ export async function POST(req: Request, res: Response) {
       headers: {
         accept: "application/json",
         "content-type": "application/json",
-        authorization: `Basic ${process.env.GAT}`,
+        authorization: `Basic OnNrX2cqKioqKioqKioqKioqKioqKioqKktKdmo=`,
       },
       body: JSON.stringify({
         customer: {
