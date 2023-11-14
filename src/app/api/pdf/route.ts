@@ -24,6 +24,8 @@ export async function POST(req: any) {
         options
       );
       const response = await requeste.json();
+       
+    
       if (response.status === "paid") {
         const dynamicLink = `https://harmonizacao.vercel.app/api/download?id=${id}`;
         const transporter = await nodemailer.createTransport({
@@ -92,9 +94,30 @@ export async function POST(req: any) {
       `,
         });
 
-        return NextResponse.json({ message: `Enviado com sucesso! Verifique seu email e caixa de spam , email enviado para ${maskEmailInput}` });
+        return NextResponse.json({ message: `Obrigado por sua compra! Agradecemos por escolher nossos produtos.
+        Estamos trabalhando diligentemente para processar seu pedido, dentro de até  5 minutos
+        você poderá fazer o download dos seus itens adquiridos. Fique atento
+        para mais atualizações em breve! Enviado com sucesso! Atualize  verifique seu email e caixa de spam , email enviado para ${maskEmailInput}` });
+      }
+      else{
+        const options = {
+          method: 'PATCH',
+          headers: {
+            accept: "application/json",
+            authorization: "Basic c2tfdGVzdF93bnBWMDNPZk94SU5RYkJNOg==",
+          },
+        };
+        const requeste = await fetch(
+          `https://api.pagar.me/core/v5/orders/${id}/closed`,
+          options
+        );
+        const response = await requeste.json();
+         console.log(response)
+         return NextResponse.json({message:"Erro ao processar o pagamento. Seu pedido será finalizado por motivos de segurança. "},{status:500})
+
       }
     }
+    
   } catch (error) {
     console.log(error);
     return NextResponse.json(

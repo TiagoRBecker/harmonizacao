@@ -4,12 +4,14 @@ import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createCookies} from "@/utils/token"
+import Loading from "@/components/Loading";
 
 const Sucess = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("order_id");
   const [ message ,setMessage] = useState('')
   const [ status , setStatus] = useState(false)
+   const [ loading , setLoading] = useState(true)
 
   useEffect(() => {
     //Funçao que recebe a order do gatway 
@@ -22,8 +24,9 @@ const Sucess = () => {
        const response = await request.json()
         console.log(response)
        if(response.message){
-         setStatus(true)
+        
          setMessage(response.message)
+         setLoading(false)
        }
       return
     }
@@ -36,28 +39,19 @@ const Sucess = () => {
       
     }
   }, []);
-
- 
   
-  
-  
-  
-  
-  
-  
- 
   return (
     <>
     <Head/>
-    <section className="flex flex-col w-full h-screen  items-center ">
-      <h1 className="text-center mt-14 text-lg text-[#072137] w-[80%]">
-        Obrigado por sua compra! Agradecemos por escolher nossos produtos.
-        Estamos trabalhando diligentemente para processar seu pedido, dentro de até <span className="text-color font-bold"> 5 minutos</span>{""}
-        você poderá fazer o download dos seus itens adquiridos. Fique atento
-        para mais atualizações em breve!
-      </h1>
+    <section className="flex flex-col w-full h-screen  items-center justify-center ">
+      {
+        loading ?
+        <Loading/>
+        :
+         <p className="text-center text-xl text-gray-500">{message}</p>
+      }
    
-      {status && <p className="text-center text-xl text-gray-500">{message}</p>}
+      
       
     </section>
     </>
