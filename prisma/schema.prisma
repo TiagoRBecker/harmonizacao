@@ -47,7 +47,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-
+  profession String?
+  docs String?
   Checkout Checkout[]
   terms    TermsOfUse[]
 }

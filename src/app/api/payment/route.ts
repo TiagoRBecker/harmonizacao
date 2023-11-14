@@ -57,7 +57,7 @@ export async function POST(req: Request, res: Response) {
       headers: {
         accept: "application/json",
         "content-type": "application/json",
-        authorization: "Basic c2tfdGVzdF93bnBWMDNPZk94SU5RYkJNOg==",
+        authorization: `Basic ${process.env.GAT}`,
       },
       body: JSON.stringify({
         customer: {
@@ -110,7 +110,7 @@ export async function POST(req: Request, res: Response) {
                 installments: [
                   {
                     number: 1,
-                    total: totalAmount,
+                    total: totalAmount + 10,
                   },
                   {
                     number: 2,

@@ -16,7 +16,7 @@ export async function POST(req: any) {
         method: "GET",
         headers: {
           accept: "application/json",
-          authorization: "Basic c2tfdGVzdF93bnBWMDNPZk94SU5RYkJNOg==",
+          authorization: `Basic ${process.env.GAT}`,
         },
       };
       const requeste = await fetch(
@@ -104,7 +104,7 @@ export async function POST(req: any) {
           method: 'PATCH',
           headers: {
             accept: "application/json",
-            authorization: "Basic c2tfdGVzdF93bnBWMDNPZk94SU5RYkJNOg==",
+            authorization: `Basic ${process.env.GAT}`,
           },
         };
         const requeste = await fetch(
@@ -112,7 +112,7 @@ export async function POST(req: any) {
           options
         );
         const response = await requeste.json();
-         console.log(response)
+        
          return NextResponse.json({message:"Erro ao processar o pagamento. Seu pedido será finalizado por motivos de segurança. "},{status:500})
 
       }

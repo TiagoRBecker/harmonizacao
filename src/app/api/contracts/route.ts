@@ -4,13 +4,14 @@ export async function POST(req: Request) {
   const { slug } = await req.json();
 
   try {
-    const create = await prisma?.products.update({
-   where:{
-    id:7
-   },
+    const create = await prisma?.products.create({
+  
    data:{
-   
-    slug
+    title:"Teste",
+    price:500,
+    slug:"produto de teste",
+    thumb:"",
+    img:""
    
     
    }

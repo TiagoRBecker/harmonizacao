@@ -15,7 +15,7 @@ export async function GET(req: Request) {
     method: "GET",
     headers: {
       accept: "application/json",
-      authorization: "Basic c2tfdGVzdF93bnBWMDNPZk94SU5RYkJNOg==",
+      authorization: `Basic ${process.env.GAT}`,
     },
   };
   const requeste = await fetch(

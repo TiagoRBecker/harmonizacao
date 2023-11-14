@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import prisma from "@/server/prisma"
 import bcrypt from "bcrypt";
 export async function POST(req: Request) {
-    const {name , email , password} = await  req.json()
+    const {name , email , password,profession, docs} = await  req.json()
    
     try {
        
@@ -23,6 +23,8 @@ export async function POST(req: Request) {
                 name:name,
                 email:email,
                 password:hash,
+                profession:profession,
+                docs:docs,
                 image:"https://res.cloudinary.com/tiagobecker/image/upload/v1693489085/user_c2gvjz.png"
             }
          })
