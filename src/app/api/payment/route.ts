@@ -57,7 +57,7 @@ export async function POST(req: Request, res: Response) {
       headers: {
         accept: "application/json",
         "content-type": "application/json",
-        authorization: `Basic OnNrX2Q5MGFhMjEyOGNiZjQzMzFiZWI0NDhhYmRhYjMzNDU5`,
+        authorization:`Basic ${process.env.GAT}`,
       },
       body: JSON.stringify({
         customer: {
@@ -145,14 +145,14 @@ export async function POST(req: Request, res: Response) {
     const request = await fetch("https://api.pagar.me/core/v5/orders", options);
    
     const response = await request.json();
-     console.log(response)
+     console.log("Acesso negado",response)
     if (response.checkouts[0].payment_url) {
       
 
       return NextResponse.json({ data: response.checkouts[0].payment_url, status:200 },{status:200});
     }
     else{
-      return NextResponse.json({response:response})
+      return NextResponse.json({message:response.message})
     }
   } catch (error) {
     console.log(error);
