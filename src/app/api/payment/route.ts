@@ -151,6 +151,9 @@ export async function POST(req: Request, res: Response) {
 
       return NextResponse.json({ data: response.checkouts[0].payment_url, status:200 },{status:200});
     }
+    else{
+      return NextResponse.json({response:response})
+    }
   } catch (error) {
     console.log(error);
     

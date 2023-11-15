@@ -52,6 +52,7 @@ const Cart = () => {
       });
 
       const response = await payment.json();
+       console.log(response)
       if (response.data) {
         setLoading(true);
         await setTimeout(() => {
