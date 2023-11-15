@@ -52,7 +52,7 @@ const Cart = () => {
       });
 
       const response = await payment.json();
-       console.log(response)
+       
       if (response.data) {
         setLoading(true);
         await setTimeout(() => {
@@ -64,7 +64,7 @@ const Cart = () => {
       }
     } catch (error) {
       console.log(error);
-         console.log("error 500")
+        
     }
   });
   //Funçao para abrir e fechar o modal
