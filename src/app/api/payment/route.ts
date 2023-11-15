@@ -102,7 +102,7 @@ export async function POST(req: Request, res: Response) {
               success_url: "https://harmonizacao.vercel.app/sucess",
               skip_checkout_success_page: false,
               customer_editable: true,
-              billing_address_editable: true,
+              billing_address_editable: false,
               Pix: {
                 expires_in: 108000,
               },
