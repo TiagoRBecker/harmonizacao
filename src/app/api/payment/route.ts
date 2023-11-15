@@ -137,7 +137,7 @@ export async function POST(req: Request, res: Response) {
           },
         ],
         
-        antifraud_enabled: false,
+    
         closed: true,
       }),
      
