@@ -112,16 +112,16 @@ export default function Modal({
             <p>
             Ao aceitar os termos de uso, você concorda em cumprir e respeitar integralmente as seguintes diretrizes e condições estabelecidas neste documento. Estes termos de uso formam um contrato legal entre você e Harmonização Prontuários e regem o uso de nossos serviços e plataformas online.
             </p>
-            <div className="flex gap-2 justify-center items-center w-full ">
+            <div className="flex-col py-4 md:flex md:flex-row gap-2 justify-center items-center w-full ">
               <button
-                className="mt-4 mb-8  rounded-md bg-green-700 px-6 py-3 font-medium text-white"
+                className=" w-[280px]  md:mt-4 mb-8  rounded-md bg-green-700 px-6 py-3 font-medium text-white"
                 onClick={handleAcceptedTerms}
               >
                 Aceito os termos de uso
               </button>
 
               <button
-                className="  mt-4 mb-8  rounded-md bg-red-700 px-6 py-3 font-medium text-white"
+                className=" w-[280px]  md:mt-4 mb-8  rounded-md bg-red-700 px-6 py-3 font-medium text-white"
                 onClick={handleCancel}
               >
                 Não aceito os termos de uso
@@ -130,7 +130,7 @@ export default function Modal({
           </div>
         );
       default:
-        return <h1>Mostrar conteudo um</h1>;
+        return null;
     }
   };
   const handleMenus = () => {
