@@ -1,8 +1,8 @@
 "use client";
 import Head from "./head";
-import { useRouter } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { useContext, useEffect, useState } from "react";
+import { use, useContext, useEffect, useState } from "react";
 import { CartContext } from "@/Context";
 import Loading from "@/components/Loading";
 import { ToastContainer } from "react-toastify";
@@ -17,6 +17,8 @@ const Id = ({ params }: { params: { id: string } }) => {
   const { addToCart } = useContext(CartContext);
   const [products, setProducts] = useState<any>(); // state que recebe os produtos
   const [loading, setLoading] = useState(false); //state de loading
+  const [error , setError]= useState(false)
+  const [message , setMessage] = useState()
   useEffect(() => {
     if (id) {
       getDados();
@@ -27,13 +29,23 @@ const Id = ({ params }: { params: { id: string } }) => {
 
   //Funçao para receber o produto da categoria selecionado
   async function getDados() {
-   
     const get = await api.getDocs(id);
+      if(get?.message){
+       setError(true)
+       setMessage(get.message)
+       setLoading(true);
+       return
+
+      }else{
+        setProducts(get.product);
+        setLoading(true);
+      }
+ 
     
-    if (get) {
-      setProducts(get.product);
-      setLoading(true);
-    }
+  
+
+   
+    
   }
   // Adicona e vai para carrinho de compraas
   const addGoToCart = (items: any) => {
@@ -75,7 +87,12 @@ const Id = ({ params }: { params: { id: string } }) => {
        break
     }
    }
-  
+   if (id >= "8" || id === "6" ) {
+    return(
+      notFound()
+    )
+   
+  }
   return (
     <>
       <Head />
@@ -86,7 +103,7 @@ const Id = ({ params }: { params: { id: string } }) => {
         <div className="flex-col md:w-full md:flex-row h-full  flex gap-3">
           <div className="w-full md:w-1/2 h-full flex items-center justify-center">
           <video muted autoPlay loop >
-            <source src={products.img} type="video/mp4" className="rounded-md" />
+            <source src={products?.img} type="video/mp4" className="rounded-md" />
             
           </video>
            
@@ -156,7 +173,7 @@ const Id = ({ params }: { params: { id: string } }) => {
                 >
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                 </svg>
-                {stars(products.title)}
+                {stars(products?.title)}
               </span>
             </div>
             <div>

@@ -10,8 +10,10 @@ import { useSession } from "next-auth/react";
 import Modal from "@/components/modal";
 import Head from "./head";
 import BottomNav from "@/components/BottomNav";
+import { useRouter } from "next/navigation";
 
 const Cart = () => {
+   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false); //state para abrir o modal de termos de uso
 
   const [termsAccepted, setTermsAccepted] = useState(false); //state para aceitar os termos
@@ -61,6 +63,7 @@ const Cart = () => {
       }
     } catch (error) {
       console.log(error);
+         console.log("error 500")
     }
   });
   //Funçao para abrir e fechar o modal

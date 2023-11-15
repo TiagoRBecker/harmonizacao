@@ -57,7 +57,7 @@ export async function POST(req: Request, res: Response) {
       headers: {
         accept: "application/json",
         "content-type": "application/json",
-        authorization: `Basic OnNrX2cqKioqKioqKioqKioqKioqKioqKktKdmo=`,
+        authorization: `Basic OnNrX2Q5MGFhMjEyOGNiZjQzMzFiZWI0NDhhYmRhYjMzNDU5`,
       },
       body: JSON.stringify({
         customer: {
@@ -143,7 +143,9 @@ export async function POST(req: Request, res: Response) {
      
     }
     const request = await fetch("https://api.pagar.me/core/v5/orders", options);
+   
     const response = await request.json();
+     console.log(response)
     if (response.checkouts[0].payment_url) {
       
 
@@ -151,10 +153,8 @@ export async function POST(req: Request, res: Response) {
     }
   } catch (error) {
     console.log(error);
-    return NextResponse.json(
-      { message: "Erro ao criar checkout" },
-      { status: 500 }
-    );
+    
+   return  NextResponse.redirect("http://localhost:3000/error")
   }
   
 
