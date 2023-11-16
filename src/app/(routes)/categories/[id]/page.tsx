@@ -87,7 +87,7 @@ const Id = ({ params }: { params: { id: string } }) => {
        break
     }
    }
-   if (id >= "9" ) {
+   if (id >= "10" ) {
     return(
       notFound()
     )

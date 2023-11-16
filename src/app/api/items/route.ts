@@ -1,6 +1,9 @@
+import { NextResponse } from "next/server"
+import prisma from "@/server/prisma"
+
 export async function POST(req: Request) {
 
-    const create = prisma?.products.create({
+    const create = await prisma?.products.create({
         data:{
             
             price:2000,
@@ -10,4 +13,5 @@ export async function POST(req: Request) {
 
         }
     })
+    return NextResponse.json({create})
 }
