@@ -67,27 +67,27 @@ const Id = ({ params }: { params: { id: string } }) => {
   };
   const stars = (title:string)=>{
     switch(title){
-      case "Pacote para Dentistas Iniciantes":
+      case "PACOTE PARA DENTISTAS INICIANTES":
        return (<span className="text-[#54595F] ml-3">79 Avaliações</span>)
        break
-       case "Pacote para Dentistas Avançado":
+       case "PACOTE PARA DENTISTAS AVANÇADO": 
        return (<span className="text-[#54595F] ml-3">155 Avaliações</span>)
        break
-       case "Pacote para Biomédico Iniciante":
+       case "PACOTE PARA BIOMÉDICO INICIANTE":
        return (<span className="text-[#54595F] ml-3">95 Avaliações</span>)
        break
-       case "Pacote para Biomédico Avançado":
+       case "PACOTE PARA BIOMÉDICO AVANÇADO":
        return (<span className="text-[#54595F] ml-3">93 Avaliações</span>)
        break
-       case "Pacote para Profissional de harmonização Iniciante":
+       case "PACOTE PARA PROFISSIONAL DE HARMONIZAÇÃO INICIANTE":
        return (<span className="text-[#54595F] ml-3">147 Avaliações</span>)
        break
-       case "Pacote para Profissional de harmonização Avançado":
+       case "PACOTE PARA PROFISSIONAL DE HARMONIZAÇÃO AVANÇADO":
        return (<span className="text-[#54595F] ml-3">107 Avaliações</span>)
        break
     }
    }
-   if (id >= "9" || id === "6" ) {
+   if (id >= "7" ) {
     return(
       notFound()
     )
@@ -103,7 +103,7 @@ const Id = ({ params }: { params: { id: string } }) => {
         <div className="flex-col md:w-full md:flex-row h-full  flex gap-3">
           <div className="w-full md:w-1/2 h-full flex items-center justify-center">
           <video muted autoPlay loop >
-            <source src={products?.img} type="video/mp4" className="rounded-md" />
+            <source src={products?.thumb} type="video/mp4" className="rounded-md" />
             
           </video>
            
@@ -111,7 +111,7 @@ const Id = ({ params }: { params: { id: string } }) => {
           </div>
 
           <div className="lg:w-1/2 w-full h-full  px-2 py-2">
-            <h1 className="w-full text-4xl font-bold  text-left   ">
+            <h1 className="w-full text-2xl font-bold  text-left   ">
               <span className="text-color"> {products?.title}</span>
             </h1>
             <h2 className="text-sm title-font text-[#54595F] tracking-widest"></h2>

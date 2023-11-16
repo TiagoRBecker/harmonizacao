@@ -156,16 +156,16 @@ const Nav = () => {
               <div key={index} className="flex items-center justify-start gap-2 py-2">
                 <div className="w-[20%]">
                   <img
-                    src={cart.thumb}
+                    src={cart.img}
                     alt={cart.title}
-                    className="w-[40px] h-[40px] object-cover rounded-md"
+                    className="w-full h-[40px] object-cover rounded-md"
                   />
                 </div>
                 <div className="w-[80%] h-full flex flex-col ">
                   <p className="w-full text-[#54595F]  truncate">
                     {cart.title}
                   </p>
-                  <p>
+                  <p className="text-[#54595F] ">
                     {new Intl.NumberFormat("pt-BR", {
                       style: "currency",
                       currency: "BRL",
@@ -176,14 +176,14 @@ const Nav = () => {
             ))}
             <div className="w-full flex items-center py-4 ">
               <span className="font-bold">Total:</span>
-              <p>
+              <p className="text-color font-bold">
                 {new Intl.NumberFormat("pt-BR", {
                   style: "currency",
                   currency: "BRL",
                 }).format(totalPrice / 100)}
               </p>
             </div>
-            <div className="w-full">
+            <div className="w-[80%] mx-auto">
               <Link href={"/cart"} onClick={() => setShowSideCart(false)}>
                 <button className="btn-small">Comprar</button>
               </Link>

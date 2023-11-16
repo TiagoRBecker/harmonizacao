@@ -84,7 +84,7 @@ const Home = () => {
           <span 
           data-aos="fade-up"
           data-aos-duration="1000"
-          className="text-color font-bold">
+          className="text-color font-bold text-left w-[90%]  md:text-[#54595F] md:w-[60%] md:text-center">
               Baixe documentos editáveis, personalizáveis, protetivos e pautados
               nos princípios da bioética.
           </span>

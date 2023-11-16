@@ -97,7 +97,7 @@ const Contract = () => {
                   
                 
                   <div className="w-full h-full px-2 py-2 relative">
-                 <img src={items.thumb} alt={items.title} className="w-full h-full rounded-md " />
+                 <img src={items.img} alt={items.title} className="w-full h-[180px] rounded-md " />
                     <p className="absolute bg-color-green top-3 left-3 z-50  rounded-md px-4 text-white"> {categoriesLogo(items.Categories?.name )}</p>
                   </div>
                   <h1 className="w-full text-base uppercase text-left px-2">

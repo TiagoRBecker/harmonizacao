@@ -18,11 +18,11 @@ export async function GET(req: Request) {
       authorization: `Basic ${process.env.GAT}`,
     },
   };
-  const requeste = await fetch(
+  const request = await fetch(
     `https://api.pagar.me/core/v5/orders/${id}`,
     options
   );
-  const response = await requeste.json();
+  const response = await request.json();
   const order = await prisma.checkout.findUnique({
     where:{
       id:Number(response.customer.metadata.orderID)
