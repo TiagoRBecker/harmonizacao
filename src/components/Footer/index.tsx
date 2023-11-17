@@ -60,7 +60,7 @@ const Footer = () => {
               <Link
                 className="flex items-center gap-1 font-semibold  pb-2 text-sm"
                 href={
-                  "https://wa.me/5551980519018?text=Olá!+Gostaria+de+adquirir+um+contrato+manualmente.+Como+devo+proceder?"
+                  "https://api.whatsapp.com/send?phone=5551980519018&text=Bem%20vindos%20a%20plataforma%20de%20harmoniza%C3%A7%C3%A3o%20Prontu%C3%A1rios.%20Em%20que%20podemos%20ajudar%20?"
                 }
                 target="_blank"
               >

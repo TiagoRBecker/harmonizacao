@@ -21,6 +21,7 @@ export default function RootLayout({ children,}: { children: React.ReactNode;}) 
   return (
     <html lang="pt-br">
       <body className={poppins.className}>
+      
       <SessionProvider>
       <CartProvider>
         
@@ -30,7 +31,13 @@ export default function RootLayout({ children,}: { children: React.ReactNode;}) 
    
       </CartProvider>
       </SessionProvider>
-      </body>
+      
+
+      
+     
+      
+    
+</body>
     </html>
   );
 }

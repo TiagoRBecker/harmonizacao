@@ -209,14 +209,23 @@ export default function Modal({
           >
             Voltar
           </button>
-          <button
+          {
+            step === 3 ?
+            <>
+            </>
+            :
+            <button
             className="border-2 border-gray-400 py-1 px-4 bg-slate-400 rounded-md"
             onClick={handlePlus}
             disabled={step === 3}
           >
             Proximo
           </button>
-        </div>
+       
+
+          }
+          </div>
+         
       </Dialog.Panel>
     </Dialog>
   );

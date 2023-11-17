@@ -87,6 +87,11 @@ const Id = ({ params }: { params: { id: string } }) => {
        break
     }
    }
+   if(id >= "7"){
+    return(
+       notFound()
+    )
+   }
   
   return (
     <>
