@@ -5,11 +5,11 @@ export async function POST(req: Request) {
 
   try {
     const create = await prisma?.products.update({
-    where:{
-      id:6
-    },
+   where:{
+    id:7
+   },
    data:{
-    slug:slug
+   price:36800
    
     
    }
