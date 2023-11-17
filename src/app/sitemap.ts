@@ -3,23 +3,23 @@ const SiteMap = () => {
      const dateFormated = date.toLocaleString('pt-br')
     return [
         {
-            url:"https://www.documentosparaharmonizacao.com.br//",
+            url:"https://www.documentosparaharmonizacao.com.br/",
             lastModified:new Date()
         },
         {
-            url:"https://www.documentosparaharmonizacao.com.br//categories",
+            url:"https://www.documentosparaharmonizacao.com.br/categories",
             lastModified:new Date()
         },
         {
-            url:"https://www.documentosparaharmonizacao.com.br//courses",
+            url:"https://www.documentosparaharmonizacao.com.br/courses",
             lastModified:new Date()
         },
         {
-            url:"https://www.documentosparaharmonizacao.com.br//consultancy",
+            url:"https://www.documentosparaharmonizacao.com.br/consultancy",
             lastModified:new Date()
         },
         {
-            url:"https://www.documentosparaharmonizacao.com.br//contact",
+            url:"https://www.documentosparaharmonizacao.com.br/contact",
             lastModified:new Date()
         },
         {
