@@ -39,7 +39,7 @@ export async function POST(req: any) {
           },
         });
         const info = await transporter.sendMail({
-          from: "prontuarios@xn--advogadosdaharmonizao-21b5g.com.br",
+          from: "teste@xn--advogadosdaharmonizao-21b5g.com.br",
           to:session?.user.email,
           subject: "Harmonização Prontuários ",
          
