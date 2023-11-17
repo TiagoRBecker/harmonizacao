@@ -11,11 +11,12 @@ import Modal from "@/components/modal";
 import Head from "./head";
 import BottomNav from "@/components/BottomNav";
 import { useRouter } from "next/navigation";
+import { Session } from "inspector";
 
 const Cart = () => {
    const router = useRouter()
   const [isOpen, setIsOpen] = useState(false); //state para abrir o modal de termos de uso
-
+  const { data: session } = useSession();
   const [termsAccepted, setTermsAccepted] = useState(false); //state para aceitar os termos
   const [error, setError] = useState(false); //state para setar erro
   const { removeToCart, clearCart, cart } = useContext(CartContext); // contextpai , remove itens , adiciona, lista e limpa o cart
@@ -38,6 +39,9 @@ const Cart = () => {
 
   // FUnçao para enviar os dados para o gatway
   const formData = handleSubmit(async (data) => {
+    if(!session){
+      return router.push("/authentication/signin")
+    }
     if(termsAccepted === false){
       setError(true)
       return
@@ -52,7 +56,7 @@ const Cart = () => {
       });
 
       const response = await payment.json();
-       console.log(response.message)
+     
       if (response.data) {
         setLoading(true);
         await setTimeout(() => {

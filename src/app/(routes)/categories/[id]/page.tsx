@@ -50,7 +50,7 @@ const Id = ({ params }: { params: { id: string } }) => {
   // Adicona e vai para carrinho de compraas
   const addGoToCart = (items: any) => {
     if (!session) {
-      router.push("/authentication/signin");
+      router.push(`/authentication/signin?product=${id}`);
       return;
     } else {
       addToCart(items);
@@ -87,7 +87,7 @@ const Id = ({ params }: { params: { id: string } }) => {
        break
     }
    }
-   if(id > "7"){
+   if(id > "6"){
     return(
        notFound()
     )

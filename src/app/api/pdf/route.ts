@@ -24,7 +24,7 @@ export async function POST(req: any) {
         options
       );
       const response = await requeste.json();
-       
+       console.log(response)
     
       if (response.status === "paid") {
         const dynamicLink = `https://www.documentosparaharmonizacao.com.br/api/download?id=${id}`;
@@ -39,7 +39,7 @@ export async function POST(req: any) {
           },
         });
         const info = await transporter.sendMail({
-          from: "teste@xn--advogadosdaharmonizao-21b5g.com.br",
+          from: "prontuarios@xn--advogadosdaharmonizao-21b5g.com.br",
           to:session?.user.email,
           subject: "Harmonização Prontuários ",
          
