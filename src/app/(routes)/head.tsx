@@ -2,16 +2,13 @@ export default function Head() {
   return (
     <>
       <title>Harmonização Prontuários</title>
-      <meta name="title" content="Advogados da Harmonizaçao" />
+      <meta name="title" content="Hamronização Prontuários" />
       <meta
         name="description"
-        content="Advogados da Harmonização: Especialistas em contratos e proteção jurídica para clínicas de harmonização facial. Oferecemos documentos personalizados, Termo de Consentimento Livre e Esclarecido (TCLE), anamnese e blindagem legal. Consulta online disponível para orientação jurídica completa."
+        content="Hamronização Prontuários: Especialistas em contratos e proteção jurídica para clínicas de harmonização facial. Oferecemos documentos personalizados, Termo de Consentimento Livre e Esclarecido (TCLE), anamnese e blindagem legal. Consulta online disponível para orientação jurídica completa."
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-        name="google-site-verification"
-        content="jNJcq8-8QXjpXr-iZUtMH2ywudj40RypcsDQaVkCrr4"
-      />
+      <meta name="google-site-verification" content="UZipOWWqy23p_pM0a16J4aJEqu6HF9Hsa2g5PlENfZU" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -34,12 +31,12 @@ export default function Head() {
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
-        content="https://advogadosharmonizacao.vercel.app/"
+        content="https://www.documentosparaharmonizacao.com.br/"
       />
-      <meta property="og:title" content="Advogados da Harmonizaçao" />
+      <meta property="og:title" content="Harmonização Prontuários" />
       <meta
         property="og:description"
-        content="Advogados da Harmonização: Especialistas em contratos e proteção jurídica para clínicas de harmonização facial. Oferecemos documentos personalizados, Termo de Consentimento Livre e Esclarecido (TCLE), anamnese e blindagem legal. Consulta online disponível para orientação jurídica completa."
+        content="Harmonização Prontuários: Especialistas em contratos e proteção jurídica para clínicas de harmonização facial. Oferecemos documentos personalizados, Termo de Consentimento Livre e Esclarecido (TCLE), anamnese e blindagem legal. Consulta online disponível para orientação jurídica completa."
       />
       <meta
         property="og:image"
@@ -48,12 +45,12 @@ export default function Head() {
       <meta property="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:url"
-        content="https://advogadosharmonizacao.vercel.app/"
+        content="https://www.documentosparaharmonizacao.com.br/"
       />
-      <meta property="twitter:title" content="Advogados da Harmonizaçao" />
+      <meta property="twitter:title" content="Harmonização Prontuários" />
       <meta
         property="twitter:description"
-        content="Advogados da Harmonização: Especialistas em contratos e proteção jurídica para clínicas de harmonização facial. Oferecemos documentos personalizados, Termo de Consentimento Livre e Esclarecido (TCLE), anamnese e blindagem legal. Consulta online disponível para orientação jurídica completa."
+        content="Harmonização Prontuários: Especialistas em contratos e proteção jurídica para clínicas de harmonização facial. Oferecemos documentos personalizados, Termo de Consentimento Livre e Esclarecido (TCLE), anamnese e blindagem legal. Consulta online disponível para orientação jurídica completa."
       />
       <meta
         property="twitter:image"
