@@ -8,8 +8,8 @@ import 'react-email-mask/dist/index.css'
 export async function POST(req: any) {
   const { id } = await req.json();
 
-  const session = await getServerSession(authOptions);
-  const maskEmailInput = maskEmail(session?.user.email as string)
+
+
   try {
     if (id) {
       const options = {
@@ -24,9 +24,12 @@ export async function POST(req: any) {
         options
       );
       const response = await requeste.json();
-       console.log(response)
+      
+       
+      
     
       if (response.status === "paid") {
+         const maskEmailInput = await maskEmail(response.customer?.email)
         const dynamicLink = `https://www.documentosparaharmonizacao.com.br/api/download?id=${id}`;
         const transporter = await nodemailer.createTransport({
           service: "SMTP",
@@ -39,8 +42,8 @@ export async function POST(req: any) {
           },
         });
         const info = await transporter.sendMail({
-          from: "teste@xn--advogadosdaharmonizao-21b5g.com.br",
-          to:session?.user.email,
+          from: process.env.EMAIL,
+          to:"teste@gmail.com",
           subject: "Harmonização Prontuários ",
          
 

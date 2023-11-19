@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useContext } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { CartContext } from "../../Context";
 import { signOut, useSession } from "next-auth/react";
 import { links } from "../Mocks";
@@ -9,7 +9,7 @@ import { Links } from "@/utils/types";
 
 const Nav = () => {
   const path = usePathname();
-
+ const router = useRouter()
   const [showMenu, setShowMenu] = useState(false);
 
   const [showSideCart, setShowSideCart] = useState(false);
@@ -25,13 +25,21 @@ const Nav = () => {
   const totalPrice = cart?.reduce((acc: any, item: any) => {
     return acc + item.price * 1;
   }, 0) as any;
-
+   const handleGoToCart =()=>{
+    if(!session){
+      setShowSideCart(false)
+      return  router.push("/authentication/signin")
+     
+    }else{
+      router.push("/cart")
+    }
+   }
   return (
     <header className="px-4 w-full h-32 flex items-center justify-around bg-white relative  border-b-2 border-gray-400 z-50 ">
-      <div className="w-[40%] md:w-[20%] h-full  ">
+      <div className="w-[40%] flex items-center justify-center py-4 px-4 md:w-[20%] h-full  ">
         <Link href={"/"}>
           <img
-            src="/logo.ico"
+            src="/logo.png"
             alt="Logo"
             className="w-full h-full object-cover"
           />
@@ -45,20 +53,21 @@ const Nav = () => {
                 ? "uppercase text-[#54595F] border-b-2 border-[#329f83] hover:text-black "
                 : "uppercase text-[#54595F] border-b-2 border-white"
             }
+            onClick={() => setShowMenu(false)}
           >
             <Link href={"/"}>Home</Link>
           </li>
           {links.map((link: any, index: number) => (
             <li
-            key={index}
+              key={index}
               className={
                 path.startsWith(link.path)
                   ? "uppercase text-[#54595F] border-b-2 border-[#329f83] hover:text-black "
                   : "uppercase text-[#54595F] border-b-2 border-white"
               }
-             
+              onClick={() => setShowMenu(false)}
             >
-              <Link   href={link.path}>{link.name}</Link>
+              <Link href={link.path}>{link.name}</Link>
             </li>
           ))}
           {status === "authenticated" && (
@@ -78,15 +87,17 @@ const Nav = () => {
           }
         >
           <Link href={"/"}>
-            <li className="w-full cursor-pointer  flex items-center justify-center uppercase text-gray-400 hover:text-black hover:bg-gray-300">
+            <li
+              onClick={() => setShowMenu(false)}
+              className="w-full cursor-pointer  flex items-center justify-center uppercase text-gray-400 hover:text-black hover:bg-gray-300"
+            >
               Home
             </li>
           </Link>
           {links.map((link: any, index: number) => (
-            <Link  key={index} href={link.path}>
+            <Link key={index} href={link.path}>
               <li
                 onClick={() => setShowMenu(false)}
-               
                 className="w-full cursor-pointer  flex items-center justify-center uppercase text-gray-400 hover:text-black hover:bg-gray-300"
               >
                 {link.name}
@@ -153,7 +164,10 @@ const Nav = () => {
         {cart.length > 0 ? (
           <>
             {cart.map((cart: any, index: number) => (
-              <div key={index} className="flex items-center justify-start gap-2 py-2">
+              <div
+                key={index}
+                className="flex items-center justify-start gap-2 py-2"
+              >
                 <div className="w-[20%]">
                   <img
                     src={cart.img}
@@ -184,9 +198,9 @@ const Nav = () => {
               </p>
             </div>
             <div className="w-[80%] mx-auto">
-              <Link href={"/cart"} onClick={() => setShowSideCart(false)}>
-                <button className="btn-small">Comprar</button>
-              </Link>
+               
+                <button onClick={handleGoToCart} className="btn-small">Comprar</button>
+              
             </div>
           </>
         ) : (

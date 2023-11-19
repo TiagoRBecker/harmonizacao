@@ -46,8 +46,8 @@ const Home = () => {
           data-aos-duration="1000"
           className="w-full  items-start md:w-[50%] h-full md:flex md:items-center md:justify-center my-10"
         >
-          <video muted autoPlay loop className="movie" >
-            <source src="/docs.mp4" type="video/mp4" className="rounded-md" />
+          <video muted autoPlay loop  playsInline  className="movie" >
+            <source src="/docs.mp4" type="video/mp4"  />
             
           </video>
         </div>

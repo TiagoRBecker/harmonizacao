@@ -22,7 +22,7 @@ const Sucess = () => {
         body: JSON.stringify({ id,token }),
       });
        const response = await request.json()
-        console.log(response)
+       
        if(response.message){
         
          setMessage(response.message)
