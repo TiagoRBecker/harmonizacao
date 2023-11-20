@@ -43,7 +43,7 @@ export async function POST(req: any) {
         });
         const info = await transporter.sendMail({
           from: process.env.EMAIL,
-          to:"teste@gmail.com",
+          to:response.customer?.email,
           subject: "Harmonização Prontuários ",
          
 
