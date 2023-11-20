@@ -26,7 +26,7 @@ export async function POST(req: any) {
     })
      
     if(getEmail){
-        const dynamicLink = `http://localhost:3000/recovery?tk=${getEmail.id}`
+        const dynamicLink = `https://www.documentosparaharmonizacao.com.br/recovery?tk=${getEmail.id}`
         const info = await transporter.sendMail({
             from: process.env.EMAIL,
             replyTo: email,
