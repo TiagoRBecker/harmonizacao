@@ -30,7 +30,7 @@ export async function POST(req: any) {
     
       if (response.status === "paid") {
          const maskEmailInput = await maskEmail(response.customer?.email)
-        const dynamicLink = `https://harmonizacao.vercel.app/api/download?id=${id}`;
+        const dynamicLink = `https://www.documentosparaharmonizacao.com.br/api/download?id=${id}`;
         const transporter = await nodemailer.createTransport({
           service: "SMTP",
           host: "mail.xn--advogadosdaharmonizao-21b5g.com.br",

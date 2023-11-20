@@ -3,7 +3,7 @@ import prisma from "@/server/prisma"
 import bcrypt from "bcrypt"
 export async function POST(req: any) {
  const {tk , pass} = await req.json()
-  console.log(tk)
+ 
  try {
     if(tk){
         const hash = await bcrypt.hashSync(pass, Number(process.env.SALT));
