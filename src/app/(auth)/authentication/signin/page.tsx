@@ -131,9 +131,9 @@ const Signin = () => {
                       </Link>
                     </p>
                   </div>
-                  <a href="#" className="">
+                  <Link href={"/recovery"} className="text-gray-500">
                     Esqueceu sua senha?
-                  </a>
+                    </Link>
                 </div>
               </div>
 

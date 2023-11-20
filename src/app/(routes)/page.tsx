@@ -14,6 +14,7 @@ import { FaWhatsapp } from "react-icons/fa"
 import Whatsszapp from "@/components/WhatssappButtom/intex";
 const Home = () => {
   const [categories, setCategories] = useState([]);
+
   useEffect(() => {
     getCategories();
     AOS.init();
@@ -25,6 +26,8 @@ const Home = () => {
   };
   return (
     <>
+   
+
     <Head />
 
       
@@ -357,3 +360,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

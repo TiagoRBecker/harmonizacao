@@ -23,8 +23,25 @@ export const api = {
         })
          const response = await request.json()
          return response
+    },
+    async verifyUser(email:string){
+        const request  = await fetch(`/api/recovery`, {
+            method:"POST",
+            body:JSON.stringify({email})
+        })
+        const response = await request.json()
+        return response
+    },
+    async recoveryPass(tk:string,pass:string){
+        const request  = await fetch(`/api/changePass`, {
+            method:"POST",
+            body:JSON.stringify({tk,pass})
+        })
+        const response = await request.json()
+        return response
     }
     
-     
+    
+    
 
 }

@@ -102,7 +102,7 @@ const Id = ({ params }: { params: { id: string } }) => {
         <div className="w-full h-full px-5  mx-auto">
         <div className="flex-col md:w-full md:flex-row h-full  flex gap-3">
           <div className="w-full md:w-1/2 h-full flex items-center justify-center">
-          <video muted autoPlay loop >
+          <video muted autoPlay loop playsInline >
             <source src={products?.thumb} type="video/mp4" className="rounded-md" />
             
           </video>
