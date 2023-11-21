@@ -61,7 +61,7 @@ const Contact = ({color}:any) => {
               d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
             />
           </svg>
-          <Link href={"https://api.whatsapp.com/send?phone=5551980519018&text=Bem%20vindos%20a%20plataforma%20de%20harmoniza%C3%A7%C3%A3o%20Prontu%C3%A1rios.%20Em%20que%20podemos%20ajudar%20?"} target="_blank">
+          <Link href={"https://api.whatsapp.com/send/?phone=5551980519018&text=Ol%C3%A1%21+Gostaria+de+conversar+sobre+documentos+projetados+juridicamente+para+profissionais+da+harmoniza%C3%A7%C3%A3o.+Meu+nome+%C3%A9+%28insira+seu+nome%29&type=phone_number&app_absent=0"} target="_blank">
             <p className="text-[#072137] pt-2">( 51 )98051-9018</p>
           </Link>
          

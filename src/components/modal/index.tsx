@@ -11,10 +11,10 @@ export default function Modal({
   const [accepted, setAccepted] = useState(false);
   const [notAccepted, setNotAccepted] = useState(false);
   const [error, setError] = useState(false);
-  const [step, setStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(1);
 
   const getLayout = () => {
-    switch (step) {
+    switch (currentStep) {
       case 1:
         return (
           <>
@@ -133,18 +133,18 @@ export default function Modal({
         return null;
     }
   };
+  // Volta o modal
   const handleMenus = () => {
-    setStep(step - 1);
+    setCurrentStep(currentStep - 1);
   };
+  //Avança o modal
   const handlePlus = () => {
-    if (step === 1 && accepted === false) {
+    if ((currentStep === 1 && !accepted) || (currentStep === 2 && !notAccepted)) {
       setError(true);
-      return;
-    } else if (step === 2 && notAccepted === false) {
-      setError(true);
-      return;
+      return
     }
-    setStep(step + 1);
+   
+    setCurrentStep(currentStep + 1);
   };
   const handleAccepted = () => {
     setAccepted(!accepted);
@@ -165,7 +165,7 @@ export default function Modal({
 
       setNextTerms(false);
       setIsOpen(false);
-      setStep(1);
+      setCurrentStep(1);
     } else {
       return alert("Error");
     }
@@ -173,7 +173,7 @@ export default function Modal({
   const handleCancel = () => {
     setNextTerms(false);
     setIsOpen(false);
-    setStep(1);
+    setCurrentStep(1);
     setAccepted(false);
     setNotAccepted(false);
   };
@@ -205,19 +205,19 @@ export default function Modal({
           <button
             className="border-2 border-gray-400 py-1 px-4 bg-slate-400 rounded-md"
             onClick={handleMenus}
-            disabled={step === 1}
+            disabled={currentStep === 1}
           >
             Voltar
           </button>
           {
-            step === 3 ?
+            currentStep === 3 ?
             <>
             </>
             :
             <button
             className="border-2 border-gray-400 py-1 px-4 bg-slate-400 rounded-md"
             onClick={handlePlus}
-            disabled={step === 3}
+            disabled={currentStep === 3}
           >
             Proximo
           </button>

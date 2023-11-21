@@ -26,7 +26,7 @@ const Consultancy = () => {
             
 
               <button className="btn-small">
-              <Link href={"https://api.whatsapp.com/send?phone=5551980519018&text=Bem%20vindos%20a%20plataforma%20de%20harmoniza%C3%A7%C3%A3o%20Prontu%C3%A1rios.%20Em%20que%20podemos%20ajudar%20?"} target="_blank">
+              <Link href={"https://api.whatsapp.com/send/?phone=5551980519018&text=Ol%C3%A1%21+Gostaria+de+conversar+sobre+documentos+projetados+juridicamente+para+profissionais+da+harmoniza%C3%A7%C3%A3o.+Meu+nome+%C3%A9+%28insira+seu+nome%29&type=phone_number&app_absent=0"} target="_blank">
                  Agendar
                 </Link>
               </button>
