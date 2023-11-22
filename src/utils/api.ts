@@ -1,6 +1,14 @@
 
 
 export const api = {
+    async getProducts (){
+        const request = await fetch("http://localhost:3000/api/contracts",{
+            method:"GET",
+          
+         })
+         const response = await request.json()
+         return response
+    },
     async getDocs(id:string){
      const request = await fetch(`/api/contracts/${id}`,{
         method:"GET",

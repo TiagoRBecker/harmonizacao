@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { api } from "@/utils/api";
 import { FaWhatsapp } from "react-icons/fa"
 import Whatsszapp from "@/components/WhatssappButtom/intex";
+import Products from "@/components/Products";
 const Home = () => {
   const [categories, setCategories] = useState([]);
 
@@ -200,6 +201,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Products/>
       {/*Banner Video*/}
       <section className="flex-col w-full h-full md: flex  items-center justify-center bg-white py-[1.5rem]">
         <h1
