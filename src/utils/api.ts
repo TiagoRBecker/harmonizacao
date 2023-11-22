@@ -2,7 +2,7 @@
 
 export const api = {
     async getProducts (){
-        const request = await fetch("http://localhost:3000/api/contracts",{
+        const request = await fetch("/api/contracts",{
             method:"GET",
           
          })
