@@ -58,7 +58,7 @@ export const create = z.object({
 .refine((data) => data.password === data.confirm, {
   message: "As senhas não combinam",
   path: ["confirm"], // path of error
-});;
+})
 
 export type Icreate = z.infer<typeof create>;
 export type Ilogin = z.infer<typeof login>;
